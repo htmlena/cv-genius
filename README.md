@@ -1,1 +1,1 @@
-# CV-genius
+# cv-genius
