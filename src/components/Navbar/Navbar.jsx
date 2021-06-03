@@ -5,15 +5,21 @@ import './style.css';
 const Navbar = () => {
   return (
     <nav>
-      <ul>
+      <ul className="nav-list__container">
         <li className="nav-list">
-          <Link to="/">Úvodní stránka</Link>
+          <Link className="nav-link" to="/">
+            Úvodní stránka
+          </Link>
         </li>
         <li className="nav-list">
-          <Link to="/cv-generator">CV Generátor</Link>
+          <Link className="nav-link" to="/cv-generator">
+            CV Generátor
+          </Link>
         </li>
         <li className="nav-list">
-          <Link to="/about">O nás</Link>
+          <Link className="nav-link" to="/about">
+            O nás
+          </Link>
         </li>
       </ul>
     </nav>

@@ -1,3 +1,20 @@
+.nav-list__container {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem;
+  background-color: #e8edf6;
+}
+
 .nav-list {
-  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #373f41;
+}
+
+.nav-link:hover,
+.nav-link:focus {
 }
