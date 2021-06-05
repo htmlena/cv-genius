@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 import { CvView } from './../CvView';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 
 const Generator = () => {
+  const [previewVisible, setPreviewVisible] = useState(true);
+
   return (
     <>
       <form className="main-form-container">
@@ -238,16 +240,33 @@ const Generator = () => {
               <div>
                 <button>+ Add Language</button>
               </div>
+              <div>
+                <button
+                  onClick={() => {
+                    if (previewVisible) {
+                      setPreviewVisible(false);
+                    } else {
+                      setPreviewVisible(true);
+                    }
+                  }}
+                >
+                  Preview
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </form>
-      <div className="preview">
-        <CvView />
-      </div>
-      <PDFDownloadLink document={<CvView />}>
-        <button>Download CV</button>
-      </PDFDownloadLink>
+      {previewVisible && (
+        <>
+          <div className="preview">
+            <CvView />
+          </div>
+          <PDFDownloadLink document={<CvView />}>
+            <button>Download CV</button>
+          </PDFDownloadLink>
+        </>
+      )}
     </>
   );
 };
