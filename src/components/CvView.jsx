@@ -12,16 +12,13 @@ import {
 // Font.register({ family: 'sans-serif', src: font, format: 'truetype' });
 
 const styles = StyleSheet.create({
-  document: {
-    weight: '21cm',
-  },
-
   page: {
     // fontFamily: 'sans-serif',
     paddingLeft: '50pt',
     paddingRight: '50pt',
     display: 'flex',
     flexDirection: 'column',
+    fontSize: 12,
   },
 
   email: {
@@ -54,6 +51,10 @@ const styles = StyleSheet.create({
     marginBottom: '20pt',
   },
 
+  section: {
+    marginBottom: '20pt',
+  },
+
   experience: {
     display: 'block',
     fontSize: 20,
@@ -82,8 +83,41 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
 
-  section: {
-    marginBottom: '10pt',
+  sectionJob: {
+    display: 'block',
+    marginBottom: '20pt',
+  },
+
+  sectionEducation: {
+    display: 'block',
+    marginBottom: '20pt',
+  },
+
+  skillsLevels: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
+    width: '200pt',
+  },
+
+  sectionSkills: {
+    display: 'flex',
+    marginBottom: '20pt',
+    justifyContent: 'space-between',
+  },
+
+  sectionLevel: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+
+  skill: {
+    display: 'flex',
+  },
+
+  level: {
+    display: 'flex',
   },
 });
 
@@ -106,75 +140,116 @@ export const CvView = () => {
         {/* Job experience 1 */}
         <View style={styles.section}>
           <Text style={styles.experience}>Work experience</Text>
-          <View style={styles.container}>
-            <Text style={styles.position}>Junior recruiter</Text>
-            <View style={styles.containerDates}>
-              <Text style={styles.startDate}>1.6.2020 -&nbsp;</Text>
-              <Text style={styles.endDate}>30.3.2021</Text>
+          <View style={styles.sectionJob}>
+            <View style={styles.container}>
+              <Text style={styles.position}>Junior recruiter</Text>
+              <View style={styles.containerDates}>
+                <Text style={styles.date}>1.6.2020 - 30.3.2021</Text>
+              </View>
             </View>
-          </View>
-          <View style={styles.container}>
-            <Text style={styles.company}>Apple</Text>
-            <Text style={styles.city}>Prague</Text>
-          </View>
-          <Text style={styles.jobDescription}>
-            Among my responsibilities was to hire new employees into our company
-            by screening their CVs, schedule interviews and hgvbgjh jknkj jnjwe
-            fewf zjuh sdssdc rgrtgb edfrgv getg thtzhj ewferg - fgevfbvefgbr -
-            dfbdbrbgbdv
-          </Text>
-        </View>
-        {/* Job experience 2 */}
-        <View style={styles.section}>
-          <View style={styles.container}>
-            <Text style={styles.position}>Senior Executive</Text>
-            <View style={styles.containerDates}>
-              <Text style={styles.startDate}>1.8.2020 -&nbsp;</Text>
-              <Text style={styles.endDate}>30.5.2021</Text>
+            <View style={styles.container}>
+              <Text style={styles.company}>Apple</Text>
+              <Text style={styles.city}>Prague</Text>
             </View>
-          </View>
-          <View style={styles.container}>
-            <Text style={styles.company}>
-              Phillip and Morris company, s.r.o.
+            <Text style={styles.jobDescription}>
+              Among my responsibilities was to hire new employees into our
+              company by screening their CVs, schedule interviews and hgvbgjh
+              jknkj jnjwe fewf zjuh sdssdc rgrtgb edfrgv getg thtzhj ewferg -
+              fgevfbvefgbr - dfbdbrbgbdv
             </Text>
-            <Text style={styles.city}>Vancouver</Text>
           </View>
-          <Text style={styles.jobDescription}>
-            Among my responsibilities was to hire new employees into our company
-            by screening their CVs, schedule interviews and hgvbgjh jknkj jnjwe
-            fewf zjuh sdssdc rgrtgb edfrgv getg thtzhj ewferg - fgevfbvefgbr -
-            dfbdbrbgbdv dgvefinnvierngvjernjvnwkr ergvkefvfrbv Among my
-            responsibilities was to hire new employees into our company by
-            screening their CVs, schedule interviews and hgvbgjh jknkj jnjwe
-            fewf zjuh sdssdc rgrtgb edfrgv getg thtzhj ewferg - fgevfbvefgbr -
-            dfbdbrbgbdv dgvefinnvierngvjernjvnwkr ergvkefvfrbv
-          </Text>
-        </View>
-        {/* Job experience 3 */}
-        <View style={styles.section}>
-          <View style={styles.container}>
-            <Text style={styles.position}>PR manager</Text>
-            <View style={styles.containerDates}>
-              <Text style={styles.startDate}>1.8.2020 -&nbsp;</Text>
-              <Text style={styles.endDate}>30.5.2021</Text>
+          {/* Job experience 2 */}
+          <View style={styles.sectionJob}>
+            <View style={styles.container}>
+              <Text style={styles.position}>Senior Executive</Text>
+              <View style={styles.containerDates}>
+                <Text style={styles.date}>1.8.2020 - 30.5.2021</Text>
+              </View>
             </View>
-          </View>
-          <View style={styles.container}>
-            <Text style={styles.company}>
-              Phillip and Morris company, s.r.o.
+            <View style={styles.container}>
+              <Text style={styles.company}>
+                Phillip and Morris company, s.r.o.
+              </Text>
+              <Text style={styles.city}>Vancouver</Text>
+            </View>
+            <Text style={styles.jobDescription}>
+              Among my responsibilities was to hire new employees into our
+              company by screening their CVs, schedule interviews and hgvbgjh
+              jknkj jnjwe fewf zjuh sdssdc rgrtgb edfrgv getg thtzhj ewferg -
+              fgevfbvefgbr - dfbdbrbgbdv dgvefinnvierngvjernjvnwkr ergvkefvfrbv
+              Among my responsibilities was to hire new employees into our
+              company by screening their CVs, schedule interviews and hgvbgjh
+              jknkj jnjwe fewf zjuh sdssdc rgrtgb edfrgv getg thtzhj ewferg -
+              fgevfbvefgbr - dfbdbrbgbdv dgvefinnvierngvjernjvnwkr ergvkefvfrbv
             </Text>
-            <Text style={styles.city}>Považská Bystrica, Slovensko</Text>
           </View>
-          <Text style={styles.jobDescription}>
-            Among my responsibilities was to hire new employees into our
-            company.
-          </Text>
+          {/* Job experience 3 */}
+          <View style={styles.sectionJob}>
+            <View style={styles.container}>
+              <Text style={styles.position}>PR manager</Text>
+              <View style={styles.containerDates}>
+                <Text style={styles.date}>1.8.2020 - 30.5.2021</Text>
+              </View>
+            </View>
+            <View style={styles.container}>
+              <Text style={styles.company}>
+                Phillip and Morris company, s.r.o.
+              </Text>
+              <Text style={styles.city}>Považská Bystrica, Slovensko</Text>
+            </View>
+            <Text style={styles.jobDescription}>
+              Among my responsibilities was to hire new employees into our
+              company.
+            </Text>
+          </View>
         </View>
         {/* Education 1 */}
         <View style={styles.section}>
           <Text style={styles.experience}>Education</Text>
-          <View style={styles.container}>
-            <Text style={styles.position}>University</Text>
+          <View style={styles.sectionEducation}>
+            <View style={styles.container}>
+              <Text style={styles.position}>
+                Vysoká škola ekonomická v Praze
+              </Text>
+              <View style={styles.containerDates}>
+                <Text style={styles.date}>1.6.2019 - 30.3.2021</Text>
+              </View>
+            </View>
+            <View style={styles.container}>
+              <Text style={styles.company}>Marketing</Text>
+              <Text style={styles.city}>Prague</Text>
+            </View>
+            <Text style={styles.jobDescription}>
+              Courses: PR strategy, online marketing
+            </Text>
+          </View>
+        </View>
+        {/* Skills */}
+        <View style={styles.section}>
+          <Text style={styles.experience}>Skills</Text>
+          <View style={styles.skillsLevels}>
+            <View style={styles.sectionSkills}>
+              <Text style={styles.skill}>Project management</Text>
+              <Text style={styles.level}>Advanced</Text>
+            </View>
+            <View style={styles.sectionLevel}>
+              <Text style={styles.skill}>Bootstrap</Text>
+              <Text style={styles.level}>Beginner</Text>
+            </View>
+          </View>
+        </View>
+        {/* Languages */}
+        <View style={styles.section}>
+          <Text style={styles.experience}>Languages</Text>
+          <View style={styles.skillsLevels}>
+            <View style={styles.sectionSkills}>
+              <Text style={styles.skill}>English</Text>
+              <Text style={styles.level}>Native</Text>
+            </View>
+            <View style={styles.sectionLevel}>
+              <Text style={styles.skill}>Slovak</Text>
+              <Text style={styles.level}>Beginner</Text>
+            </View>
           </View>
         </View>
       </Page>

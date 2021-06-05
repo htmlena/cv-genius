@@ -112,6 +112,12 @@ const Generator = () => {
               <input type="text" name="universtiy" id="universtiy" />
             </div>
             <div className="label-input-container">
+              <label className="label-block" htmlFor="faculty">
+                Faculty:
+              </label>
+              <input type="text" name="faculty" id="faculty" />
+            </div>
+            <div className="label-input-container">
               <label className="label-block" htmlFor="field-of-study">
                 Field of study:
               </label>
@@ -236,7 +242,9 @@ const Generator = () => {
           </div>
         </div>
       </form>
-      <CvView />
+      <div className="preview">
+        <CvView />
+      </div>
       <PDFDownloadLink document={<CvView />}>
         <button>Download CV</button>
       </PDFDownloadLink>
