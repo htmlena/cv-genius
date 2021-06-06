@@ -115,6 +115,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
 
       <div>
         <button
+          type="button"
           onClick={() => {
             const copiedWorkExperience = [...workExperience];
             copiedWorkExperience.push({

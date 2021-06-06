@@ -147,6 +147,7 @@ const Education = ({ education, setEducation }) => {
 
       <div>
         <button
+          type="button"
           onClick={() => {
             const copiedEducation = [...education];
             copiedEducation.push({

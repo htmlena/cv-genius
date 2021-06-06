@@ -42,6 +42,7 @@ const Languages = ({ languageLevel, setLanguageLevel }) => {
       })}
       <div>
         <button
+          type="button"
           onClick={() => {
             const copiedLanguageLevel = [...languageLevel];
             copiedLanguageLevel.push({

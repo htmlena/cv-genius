@@ -44,6 +44,7 @@ const Skills = ({ skillLevel, setSkillLevel }) => {
       })}
       <div>
         <button
+          type="button"
           onClick={() => {
             const copiedSkillLevel = [...skillLevel];
             copiedSkillLevel.push({
