@@ -131,6 +131,7 @@ export const CvView = ({
   speech,
   position,
   company,
+  city,
   jobDescription,
 }) => {
   return (
@@ -158,7 +159,7 @@ export const CvView = ({
             </View>
             <View style={styles.container}>
               <Text style={styles.company}>{company}</Text>
-              <Text style={styles.city}>Prague</Text>
+              <Text style={styles.city}>{city}</Text>
             </View>
             <Text style={styles.jobDescription}>{jobDescription}</Text>
           </View>

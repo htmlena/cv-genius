@@ -6,6 +6,8 @@ const WorkExperience = ({
   setPosition,
   company,
   setCompany,
+  city,
+  setCity,
   jobDescription,
   setJobDescription,
 }) => {
@@ -60,7 +62,13 @@ const WorkExperience = ({
         <label className="label-block" htmlFor="city">
           City:
         </label>
-        <input type="text" name="city" id="city" />
+        <input
+          type="text"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          name="city"
+          id="city"
+        />
       </div>
       <div className="label-input-container">
         <label className="label-block" htmlFor="job-description">

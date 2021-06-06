@@ -40,6 +40,8 @@ const Generator = () => {
           setPosition={setPosition}
           company={company}
           setCompany={setCompany}
+          city={city}
+          setCity={setCity}
           jobDescription={jobDescription}
           setJobDescription={setJobDescription}
         />
@@ -73,6 +75,7 @@ const Generator = () => {
               position={position}
               company={company}
               jobDescription={jobDescription}
+              city={city}
             />
           </div>
           <PDFDownloadLink
@@ -86,6 +89,7 @@ const Generator = () => {
                 position={position}
                 company={company}
                 jobDescription={jobDescription}
+                city={city}
               />
             }
           >
