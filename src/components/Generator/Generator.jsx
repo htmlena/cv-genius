@@ -107,7 +107,7 @@ const Generator = () => {
       {previewVisible && (
         <>
           <div className="preview">
-            <PDFViewer width="500px" height="700px">
+            <PDFViewer width="300px" height="500px">
               <CvView
                 userName={userName}
                 userSurname={userSurname}
