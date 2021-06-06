@@ -7,6 +7,8 @@ import {
   StyleSheet,
   Font,
 } from '@react-pdf/renderer';
+import '../PersonalInfo/PersonalInfo';
+
 // import font from './font.ttf';
 
 // Font.register({ family: 'sans-serif', src: font, format: 'truetype' });
@@ -121,42 +123,44 @@ const styles = StyleSheet.create({
   },
 });
 
-export const CvView = () => {
+export const CvView = ({
+  userName,
+  userSurname,
+  userEmail,
+  userMobile,
+  speech,
+  position,
+  company,
+  jobDescription,
+}) => {
   return (
     <Document style={styles.document}>
       <Page style={styles.page} size="A4">
-        <Text style={styles.name}>Paulína Palíková</Text>
+        <Text style={styles.name}>
+          {userName} {userSurname}
+        </Text>
         <View style={styles.section}>
           <View style={styles.container}>
-            <Text style={styles.email}>paulipalik@gmail.com</Text>
-            <Text style={styles.mobile}>730959461</Text>
+            <Text style={styles.email}>{userEmail}</Text>
+            <Text style={styles.mobile}>{userMobile}</Text>
           </View>
-          <Text style={styles.elevatorSpeech}>
-            Experienced IT architect with strong background in programming in
-            Java, PHP and other languages. Deep interest in educating women in
-            IT.
-          </Text>
+          <Text style={styles.elevatorSpeech}>{speech}</Text>
         </View>
         {/* Job experience 1 */}
         <View style={styles.section}>
           <Text style={styles.experience}>Work experience</Text>
           <View style={styles.sectionJob}>
             <View style={styles.container}>
-              <Text style={styles.position}>Junior recruiter</Text>
+              <Text style={styles.position}>{position}</Text>
               <View style={styles.containerDates}>
                 <Text style={styles.date}>1.6.2020 - 30.3.2021</Text>
               </View>
             </View>
             <View style={styles.container}>
-              <Text style={styles.company}>Apple</Text>
+              <Text style={styles.company}>{company}</Text>
               <Text style={styles.city}>Prague</Text>
             </View>
-            <Text style={styles.jobDescription}>
-              Among my responsibilities was to hire new employees into our
-              company by screening their CVs, schedule interviews and hgvbgjh
-              jknkj jnjwe fewf zjuh sdssdc rgrtgb edfrgv getg thtzhj ewferg -
-              fgevfbvefgbr - dfbdbrbgbdv
-            </Text>
+            <Text style={styles.jobDescription}>{jobDescription}</Text>
           </View>
           {/* Job experience 2 */}
           <View style={styles.sectionJob}>
