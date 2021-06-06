@@ -10,6 +10,7 @@ const Languages = ({ languageLevel, setLanguageLevel }) => {
           <div className="label-input-container">
             <label htmlFor="language"></label>
             <input
+              className="input"
               type="text"
               value={x.language}
               onChange={(e) => {

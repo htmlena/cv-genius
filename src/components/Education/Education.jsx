@@ -13,6 +13,7 @@ const Education = ({ education, setEducation }) => {
                 University:
               </label>
               <input
+                className="input"
                 type="text"
                 value={x.university}
                 onChange={(e) => {
@@ -29,6 +30,7 @@ const Education = ({ education, setEducation }) => {
                 Faculty:
               </label>
               <input
+                className="input"
                 type="text"
                 value={x.faculty}
                 onChange={(e) => {
@@ -45,6 +47,7 @@ const Education = ({ education, setEducation }) => {
                 Field of study:
               </label>
               <input
+                className="input"
                 type="text"
                 value={x.fieldOfStudy}
                 onChange={(e) => {
@@ -62,6 +65,7 @@ const Education = ({ education, setEducation }) => {
                 City:
               </label>
               <input
+                className="input"
                 type="text"
                 value={x.city}
                 onChange={(e) => {
@@ -79,6 +83,7 @@ const Education = ({ education, setEducation }) => {
                 Degree:
               </label>
               <input
+                className="input"
                 type="text"
                 value={x.degree}
                 onChange={(e) => {
@@ -96,6 +101,7 @@ const Education = ({ education, setEducation }) => {
                 Start date:
               </label>
               <input
+                className="input"
                 className="date-input"
                 type="date"
                 value={x.startDate}
@@ -111,7 +117,7 @@ const Education = ({ education, setEducation }) => {
                 End date:
               </label>
               <input
-                className="date-input"
+                className="date-input input"
                 type="date"
                 value={x.endDate}
                 onChange={(e) => {
@@ -128,6 +134,7 @@ const Education = ({ education, setEducation }) => {
                 Description:
               </label>
               <textarea
+                className="input"
                 value={x.educationDescription}
                 onChange={(e) => {
                   const oldEducation = [...education];

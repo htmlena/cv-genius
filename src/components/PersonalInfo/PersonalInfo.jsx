@@ -22,6 +22,7 @@ const PersonalInfo = ({
             Name:
           </label>
           <input
+            className="input"
             type="text"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
@@ -36,6 +37,7 @@ const PersonalInfo = ({
           Surname:
         </label>
         <input
+          className="input"
           type="text"
           value={userSurname}
           onChange={(e) => setUserSurname(e.target.value)}
@@ -49,6 +51,7 @@ const PersonalInfo = ({
           E-mail:
         </label>
         <input
+          className="input"
           type="email"
           value={userEmail}
           onChange={(e) => setUserEmail(e.target.value)}
@@ -62,6 +65,7 @@ const PersonalInfo = ({
           Mobile:
         </label>
         <input
+          className="input"
           type="tel"
           value={userMobile}
           onChange={(e) => setUserMobile(e.target.value)}
@@ -75,6 +79,7 @@ const PersonalInfo = ({
           Elevator speech:
         </label>
         <textarea
+          className="input"
           value={speech}
           onChange={(e) => setSpeech(e.target.value)}
           name="elevator-speech"

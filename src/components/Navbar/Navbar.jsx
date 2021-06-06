@@ -8,17 +8,17 @@ const Navbar = () => {
       <ul className="nav-list__container">
         <li className="nav-list">
           <Link className="nav-link" to="/">
-            Úvodní stránka
+            Home
           </Link>
         </li>
         <li className="nav-list">
           <Link className="nav-link" to="/cv-generator">
-            CV Generátor
+            CV Generator
           </Link>
         </li>
         <li className="nav-list">
           <Link className="nav-link" to="/about">
-            O nás
+            About Us
           </Link>
         </li>
       </ul>

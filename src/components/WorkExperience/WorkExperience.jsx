@@ -13,6 +13,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 Position:
               </label>
               <input
+                className="input"
                 type="text"
                 value={x.position}
                 onChange={(e) => {
@@ -30,6 +31,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 Employer:
               </label>
               <input
+                className="input"
                 type="text"
                 value={x.company}
                 onChange={(e) => {
@@ -47,6 +49,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 City:
               </label>
               <input
+                className="input"
                 type="text"
                 value={x.city}
                 onChange={(e) => {
@@ -63,7 +66,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 Start date:
               </label>
               <input
-                className="date-input"
+                className="date-input input"
                 type="date"
                 value={x.startDate}
                 onChange={(e) => {
@@ -78,7 +81,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 End date:
               </label>
               <input
-                className="date-input"
+                className="date-input input"
                 type="date"
                 value={x.endDate}
                 onChange={(e) => {
@@ -96,6 +99,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 Job description:
               </label>
               <textarea
+                className="input"
                 value={x.jobDescription}
                 onChange={(e) => {
                   const oldWorkExperience = [...workExperience];

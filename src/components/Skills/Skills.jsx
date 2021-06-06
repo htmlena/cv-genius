@@ -11,6 +11,7 @@ const Skills = ({ skillLevel, setSkillLevel }) => {
             <label htmlFor="skills"></label>
 
             <input
+              className="input"
               type="text"
               value={x.skill}
               onChange={(e) => {
