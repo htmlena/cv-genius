@@ -15,10 +15,48 @@ const Generator = () => {
   const [userEmail, setUserEmail] = useState('');
   const [userMobile, setUserMobile] = useState('');
   const [speech, setSpeech] = useState('');
-  const [position, setPosition] = useState('');
-  const [company, setCompany] = useState('');
-  const [city, setCity] = useState('');
-  const [jobDescription, setJobDescription] = useState('');
+
+  const [workExperience, setWorkExperience] = useState([
+    {
+      position: '',
+      company: '',
+      city: '',
+      jobDescription: '',
+    },
+  ]);
+  // const [position, setPosition] = useState('');
+  // const [company, setCompany] = useState('');
+  // const [city, setCity] = useState('');
+  // const [jobDescription, setJobDescription] = useState('');
+
+  const [university, setUniversity] = useState('');
+  const [faculty, setFaculty] = useState('');
+  const [fieldOfStudy, setFieldOfStudy] = useState('');
+  const [cityEducation, setCityEducation] = useState('');
+  const [degree, setDegree] = useState('');
+  const [educationDescription, setEducationDescription] = useState('');
+
+  const [skillLevel, setSkillLevel] = useState([
+    {
+      skill: '',
+      level: '',
+    },
+    {
+      skill: '',
+      level: '',
+    },
+    {
+      skill: '',
+      level: '',
+    },
+  ]);
+
+  const [languageLevel, setLanguageLevel] = useState([
+    {
+      language: '',
+      level: '',
+    },
+  ]);
 
   return (
     <>
@@ -36,18 +74,37 @@ const Generator = () => {
           setSpeech={setSpeech}
         />
         <WorkExperience
-          position={position}
-          setPosition={setPosition}
-          company={company}
-          setCompany={setCompany}
-          city={city}
-          setCity={setCity}
-          jobDescription={jobDescription}
-          setJobDescription={setJobDescription}
+          workExperience={workExperience}
+          // position={position}
+          // setPosition={setPosition}
+          // company={company}
+          // setCompany={setCompany}
+          // city={city}
+          // setCity={setCity}
+          // jobDescription={jobDescription}
+          // setJobDescription={setJobDescription}
         />
-        <Education />
-        <Skills />
-        <Languages />
+        <Education
+          university={university}
+          setUniversity={setUniversity}
+          faculty={faculty}
+          setFaculty={setFaculty}
+          fieldOfStudy={fieldOfStudy}
+          setFieldOfStudy={setFieldOfStudy}
+          cityEducation={cityEducation}
+          setCityEducation={setCityEducation}
+          degree={degree}
+          setDegree={setDegree}
+          educationDescription={educationDescription}
+          setEducationDescription={setEducationDescription}
+        />
+
+        <Skills skillLevel={skillLevel} setSkillLevel={setSkillLevel} />
+
+        <Languages
+          languageLevel={languageLevel}
+          setLanguageLevel={setLanguageLevel}
+        />
 
         <div>
           <button
@@ -66,17 +123,28 @@ const Generator = () => {
       {previewVisible && (
         <>
           <div className="preview">
-            <CvView
-              userName={userName}
-              userSurname={userSurname}
-              userEmail={userEmail}
-              userMobile={userMobile}
-              speech={speech}
-              position={position}
-              company={company}
-              jobDescription={jobDescription}
-              city={city}
-            />
+            <PDFViewer width="500px" height="700px">
+              <CvView
+                userName={userName}
+                userSurname={userSurname}
+                userEmail={userEmail}
+                userMobile={userMobile}
+                speech={speech}
+                // position={position}
+                // company={company}
+                // jobDescription={jobDescription}
+                // city={city}
+                workExperience={workExperience}
+                university={university}
+                faculty={faculty}
+                fieldOfStudy={fieldOfStudy}
+                cityEducation={cityEducation}
+                degree={degree}
+                educationDescription={educationDescription}
+                skillLevel={skillLevel}
+                languageLevel={languageLevel}
+              />
+            </PDFViewer>
           </div>
           <PDFDownloadLink
             document={
@@ -86,10 +154,19 @@ const Generator = () => {
                 userEmail={userEmail}
                 userMobile={userMobile}
                 speech={speech}
-                position={position}
-                company={company}
-                jobDescription={jobDescription}
-                city={city}
+                // position={position}
+                // company={company}
+                // jobDescription={jobDescription}
+                // city={city}
+                workExperience={workExperience}
+                university={university}
+                faculty={faculty}
+                fieldOfStudy={fieldOfStudy}
+                degree={degree}
+                educationDescription={educationDescription}
+                cityEducation={cityEducation}
+                skillLevel={skillLevel}
+                languageLevel={languageLevel}
               />
             }
           >

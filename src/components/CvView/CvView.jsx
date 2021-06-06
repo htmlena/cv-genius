@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
   },
 
   company: {
+    display: 'block',
     fontSize: 17,
     fontWeight: 400,
   },
@@ -133,6 +134,14 @@ export const CvView = ({
   company,
   city,
   jobDescription,
+  university,
+  faculty,
+  fieldOfStudy,
+  cityEducation,
+  degree,
+  educationDescription,
+  skillLevel,
+  languageLevel,
 }) => {
   return (
     <Document style={styles.document}>
@@ -213,48 +222,47 @@ export const CvView = ({
           <Text style={styles.experience}>Education</Text>
           <View style={styles.sectionEducation}>
             <View style={styles.container}>
-              <Text style={styles.position}>
-                Vysoká škola ekonomická v Praze
-              </Text>
+              <Text style={styles.position}>{university}</Text>
               <View style={styles.containerDates}>
                 <Text style={styles.date}>1.6.2019 - 30.3.2021</Text>
               </View>
             </View>
             <View style={styles.container}>
-              <Text style={styles.company}>Marketing</Text>
-              <Text style={styles.city}>Prague</Text>
+              <Text style={styles.company}>{faculty}</Text>
+              <Text style={styles.city}>{cityEducation}</Text>
             </View>
-            <Text style={styles.jobDescription}>
-              Courses: PR strategy, online marketing
+            <Text style={styles.company}>
+              {fieldOfStudy}, {degree}
             </Text>
+            <Text style={styles.jobDescription}>{educationDescription}</Text>
           </View>
         </View>
         {/* Skills */}
         <View style={styles.section}>
           <Text style={styles.experience}>Skills</Text>
           <View style={styles.skillsLevels}>
-            <View style={styles.sectionSkills}>
-              <Text style={styles.skill}>Project management</Text>
-              <Text style={styles.level}>Advanced</Text>
-            </View>
-            <View style={styles.sectionLevel}>
-              <Text style={styles.skill}>Bootstrap</Text>
-              <Text style={styles.level}>Beginner</Text>
-            </View>
+            {skillLevel.map((x) => {
+              return (
+                <View style={styles.sectionSkills}>
+                  <Text style={styles.skill}>{x.skill}</Text>
+                  <Text style={styles.level}>{x.level}</Text>
+                </View>
+              );
+            })}
           </View>
         </View>
         {/* Languages */}
         <View style={styles.section}>
           <Text style={styles.experience}>Languages</Text>
           <View style={styles.skillsLevels}>
-            <View style={styles.sectionSkills}>
-              <Text style={styles.skill}>English</Text>
-              <Text style={styles.level}>Native</Text>
-            </View>
-            <View style={styles.sectionLevel}>
-              <Text style={styles.skill}>Slovak</Text>
-              <Text style={styles.level}>Beginner</Text>
-            </View>
+            {languageLevel.map((x) => {
+              return (
+                <View style={styles.sectionSkills}>
+                  <Text style={styles.skill}>{x.language}</Text>
+                  <Text style={styles.level}>{x.level}</Text>
+                </View>
+              );
+            })}
           </View>
         </View>
       </Page>
