@@ -21,20 +21,24 @@ const Generator = () => {
       position: '',
       company: '',
       city: '',
+      startDate: '01.01.1000',
+      endDate: '01.01.2000',
       jobDescription: '',
     },
   ]);
-  // const [position, setPosition] = useState('');
-  // const [company, setCompany] = useState('');
-  // const [city, setCity] = useState('');
-  // const [jobDescription, setJobDescription] = useState('');
 
-  const [university, setUniversity] = useState('');
-  const [faculty, setFaculty] = useState('');
-  const [fieldOfStudy, setFieldOfStudy] = useState('');
-  const [cityEducation, setCityEducation] = useState('');
-  const [degree, setDegree] = useState('');
-  const [educationDescription, setEducationDescription] = useState('');
+  const [education, setEducation] = useState([
+    {
+      university: '',
+      faculty: '',
+      fieldOfStudy: '',
+      cityEducation: '',
+      degree: '',
+      startDate: '',
+      endDate: '',
+      educationDescription: '',
+    },
+  ]);
 
   const [skillLevel, setSkillLevel] = useState([
     {
@@ -75,29 +79,9 @@ const Generator = () => {
         />
         <WorkExperience
           workExperience={workExperience}
-          // position={position}
-          // setPosition={setPosition}
-          // company={company}
-          // setCompany={setCompany}
-          // city={city}
-          // setCity={setCity}
-          // jobDescription={jobDescription}
-          // setJobDescription={setJobDescription}
+          setWorkExperience={setWorkExperience}
         />
-        <Education
-          university={university}
-          setUniversity={setUniversity}
-          faculty={faculty}
-          setFaculty={setFaculty}
-          fieldOfStudy={fieldOfStudy}
-          setFieldOfStudy={setFieldOfStudy}
-          cityEducation={cityEducation}
-          setCityEducation={setCityEducation}
-          degree={degree}
-          setDegree={setDegree}
-          educationDescription={educationDescription}
-          setEducationDescription={setEducationDescription}
-        />
+        <Education education={education} setEducation={setEducation} />
 
         <Skills skillLevel={skillLevel} setSkillLevel={setSkillLevel} />
 
@@ -130,17 +114,8 @@ const Generator = () => {
                 userEmail={userEmail}
                 userMobile={userMobile}
                 speech={speech}
-                // position={position}
-                // company={company}
-                // jobDescription={jobDescription}
-                // city={city}
                 workExperience={workExperience}
-                university={university}
-                faculty={faculty}
-                fieldOfStudy={fieldOfStudy}
-                cityEducation={cityEducation}
-                degree={degree}
-                educationDescription={educationDescription}
+                education={education}
                 skillLevel={skillLevel}
                 languageLevel={languageLevel}
               />
@@ -154,17 +129,8 @@ const Generator = () => {
                 userEmail={userEmail}
                 userMobile={userMobile}
                 speech={speech}
-                // position={position}
-                // company={company}
-                // jobDescription={jobDescription}
-                // city={city}
                 workExperience={workExperience}
-                university={university}
-                faculty={faculty}
-                fieldOfStudy={fieldOfStudy}
-                degree={degree}
-                educationDescription={educationDescription}
-                cityEducation={cityEducation}
+                education={education}
                 skillLevel={skillLevel}
                 languageLevel={languageLevel}
               />
