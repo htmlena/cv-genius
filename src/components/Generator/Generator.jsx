@@ -6,10 +6,11 @@ import Education from '../Education/Education';
 import Skills from '../Skills/Skills';
 import Languages from '../Languages/Languages';
 import WorkExperience from '../WorkExperience/WorkExperience';
+
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 
 const Generator = () => {
-  const [previewVisible, setPreviewVisible] = useState(true);
+  const [previewVisible, setPreviewVisible] = useState(false);
   const [userName, setUserName] = useState('');
   const [userSurname, setUserSurname] = useState('');
   const [userEmail, setUserEmail] = useState('');
@@ -64,46 +65,50 @@ const Generator = () => {
 
   return (
     <>
-      <form className="main-form-container">
-        <PersonalInfo
-          userName={userName}
-          setUserName={setUserName}
-          userSurname={userSurname}
-          setUserSurname={setUserSurname}
-          userEmail={userEmail}
-          setUserEmail={setUserEmail}
-          userMobile={userMobile}
-          setUserMobile={setUserMobile}
-          speech={speech}
-          setSpeech={setSpeech}
-        />
-        <WorkExperience
-          workExperience={workExperience}
-          setWorkExperience={setWorkExperience}
-        />
-        <Education education={education} setEducation={setEducation} />
+      {' '}
+      {!previewVisible && (
+        <>
+          <form className="main-form-container">
+            <PersonalInfo
+              userName={userName}
+              setUserName={setUserName}
+              userSurname={userSurname}
+              setUserSurname={setUserSurname}
+              userEmail={userEmail}
+              setUserEmail={setUserEmail}
+              userMobile={userMobile}
+              setUserMobile={setUserMobile}
+              speech={speech}
+              setSpeech={setSpeech}
+            />
+            <WorkExperience
+              workExperience={workExperience}
+              setWorkExperience={setWorkExperience}
+            />
+            <Education education={education} setEducation={setEducation} />
 
-        <Skills skillLevel={skillLevel} setSkillLevel={setSkillLevel} />
+            <Skills skillLevel={skillLevel} setSkillLevel={setSkillLevel} />
 
-        <Languages
-          languageLevel={languageLevel}
-          setLanguageLevel={setLanguageLevel}
-        />
-
-        <div>
-          <button
-            onClick={() => {
-              if (previewVisible) {
-                setPreviewVisible(false);
-              } else {
-                setPreviewVisible(true);
-              }
-            }}
-          >
-            Preview
-          </button>
-        </div>
-      </form>
+            <Languages
+              languageLevel={languageLevel}
+              setLanguageLevel={setLanguageLevel}
+            />
+          </form>
+          <div>
+            <button
+              onClick={() => {
+                if (previewVisible) {
+                  setPreviewVisible(false);
+                } else {
+                  setPreviewVisible(true);
+                }
+              }}
+            >
+              Preview
+            </button>
+          </div>
+        </>
+      )}
       {previewVisible && (
         <>
           <div className="preview">
