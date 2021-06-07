@@ -79,6 +79,12 @@ const Generator = () => {
     },
   ]);
 
+  const [hobby, setHobby] = useState([
+    {
+      hobby: '',
+    },
+  ]);
+
   return (
     <>
       {' '}

@@ -122,6 +122,10 @@ const styles = StyleSheet.create({
   level: {
     display: 'flex',
   },
+
+  hobby: {
+    display: 'flex',
+  },
 });
 
 export const CvView = ({
@@ -134,6 +138,7 @@ export const CvView = ({
   skillLevel,
   languageLevel,
   workExperience,
+  hobbies,
 }) => {
   return (
     <Document style={styles.document}>
@@ -266,6 +271,19 @@ export const CvView = ({
                 <View style={styles.sectionSkills}>
                   <Text style={styles.skill}>{x.language}</Text>
                   <Text style={styles.level}>{x.level}</Text>
+                </View>
+              );
+            })}
+          </View>
+        </View>
+        {/* Hobbies */}
+        <View style={styles.section}>
+          <Text style={styles.experience}>Hobbies</Text>
+          <View style={styles.skillsLevels}>
+            {hobbies.map((x) => {
+              return (
+                <View style={styles.sectionSkills}>
+                  <Text style={styles.skill}>{x.hobby}</Text>
                 </View>
               );
             })}
