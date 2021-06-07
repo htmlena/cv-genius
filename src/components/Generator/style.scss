@@ -14,6 +14,10 @@
   width: 100%;
 }
 
+.education-container {
+  width: 100%;
+}
+
 .label-block {
   display: block;
   color: gray;
@@ -39,10 +43,10 @@
   border: 1px solid #f2f5fa;
   background-color: #f2f5fa;
   width: 100%;
+  padding: 0.7rem 0.5rem;
 }
 
 .text-input {
-  padding: 0.4rem 1.8rem;
 }
 
 .add-button {
@@ -75,12 +79,6 @@
   cursor: pointer;
   background-color: #3c64b1;
   color: white;
-}
-
-@media (min-width: 375px) {
-  .text-input {
-    padding: 0.6rem 3.2rem;
-  }
 }
 
 @media (min-width: 688px) {
@@ -129,5 +127,26 @@
 
   .we-textarea-grid {
     grid-area: workthird;
+  }
+
+  .education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'edufirst edusecond'
+      'eduthird eduthird';
+    column-gap: 30px;
+  }
+
+  .uni-grid {
+    grid-area: edufirst;
+  }
+
+  .uni-dates-grid {
+    grid-area: edusecond;
+  }
+
+  .education-textarea-grid {
+    grid-area: eduthird;
   }
 }
