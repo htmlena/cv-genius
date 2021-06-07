@@ -12,6 +12,10 @@ const PersonalInfo = ({
   setUserMobile,
   speech,
   setSpeech,
+  linkedinUrl,
+  setLinkedinUrl,
+  otherUrl,
+  setOtherUrl,
 }) => {
   return (
     <div className="personal-info-container">
@@ -78,6 +82,37 @@ const PersonalInfo = ({
             />
           </div>
         </div>
+
+        <div className="linkedin-otherUrl-grid">
+          <div className="label-input-container">
+            <label className="label-block" htmlFor="linkedinUrl">
+              Linkedin URL:
+            </label>
+            <input
+              className="input text-input"
+              type="url"
+              value={linkedinUrl}
+              onChange={(e) => setLinkedinUrl(e.target.value)}
+              name="linkedinUrl"
+              id="linkedinUrl"
+            />
+          </div>
+
+          <div className="label-input-container">
+            <label className="label-block" htmlFor="otherUrl">
+              Other URL:
+            </label>
+            <input
+              className="input text-input"
+              type="url"
+              value={otherUrl}
+              onChange={(e) => setOtherUrl(e.target.value)}
+              name="otherUrl"
+              id="otherUrl"
+            />
+          </div>
+        </div>
+
         <div className="pi-textarea-grid">
           <label className="label-block" htmlFor="elevator-speech">
             Elevator speech:

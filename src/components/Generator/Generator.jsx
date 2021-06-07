@@ -17,6 +17,8 @@ const Generator = () => {
   const [userSurname, setUserSurname] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userMobile, setUserMobile] = useState('');
+  const [linkedinUrl, setLinkedinUrl] = useState('');
+  const [otherUrl, setOtherUrl] = useState('');
   const [speech, setSpeech] = useState('');
 
   const [workExperience, setWorkExperience] = useState([
@@ -99,6 +101,10 @@ const Generator = () => {
               setUserEmail={setUserEmail}
               userMobile={userMobile}
               setUserMobile={setUserMobile}
+              linkedinUrl={linkedinUrl}
+              setLinkedinUrl={setLinkedinUrl}
+              otherUrl={otherUrl}
+              setOtherUrl={setOtherUrl}
               speech={speech}
               setSpeech={setSpeech}
             />
@@ -150,6 +156,8 @@ const Generator = () => {
                 languageLevel={languageLevel}
                 hobbies={hobbies}
                 course={course}
+                linkedinUrl={linkedinUrl}
+                otherUrl={otherUrl}
               />
             </PDFViewer>
           </div>
@@ -167,6 +175,8 @@ const Generator = () => {
                 languageLevel={languageLevel}
                 hobbies={hobbies}
                 course={course}
+                linkedinUrl={linkedinUrl}
+                otherUrl={otherUrl}
               />
             }
           >

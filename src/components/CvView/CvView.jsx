@@ -142,6 +142,8 @@ export const CvView = ({
   courseName,
   organization,
   courseDescription,
+  linkedinUrl,
+  otherUrl,
 }) => {
   return (
     <Document style={styles.document}>
@@ -153,6 +155,10 @@ export const CvView = ({
           <View style={styles.container}>
             <Text style={styles.email}>{userEmail}</Text>
             <Text style={styles.mobile}>{userMobile}</Text>
+          </View>
+          <View style={styles.container}>
+            <Text style={styles.email}>{linkedinUrl}</Text>
+            <Text style={styles.mobile}>{otherUrl}</Text>
           </View>
           <Text style={styles.elevatorSpeech}>{speech}</Text>
         </View>

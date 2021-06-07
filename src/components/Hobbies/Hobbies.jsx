@@ -3,13 +3,11 @@ import '../Generator/style.scss';
 
 const Hobbies = ({ hobbies, setHobbies }) => {
   return (
-    <div className="hobbies-container">
+    <div>
       <h2>Hobbies</h2>
-      <div>
+      <div className="hobbies-textarea-grid">
         <div className="label-input-container">
-          <label className="label-block" htmlFor="hobby">
-            Hobbies:
-          </label>
+          <label className="label-block" htmlFor="hobby"></label>
           <textarea
             className="input"
             value={hobbies}
