@@ -54,9 +54,25 @@ const Generator = () => {
       skill: '',
       level: '',
     },
+    {
+      skill: '',
+      level: '',
+    },
+    {
+      skill: '',
+      level: '',
+    },
+    {
+      skill: '',
+      level: '',
+    },
   ]);
 
   const [languageLevel, setLanguageLevel] = useState([
+    {
+      language: '',
+      level: '',
+    },
     {
       language: '',
       level: '',
