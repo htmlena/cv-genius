@@ -11,7 +11,7 @@ const Skills = ({ skillLevel, setSkillLevel }) => {
             <label htmlFor="skills"></label>
 
             <input
-              className="input"
+              className="input text-input"
               type="text"
               value={x.skill}
               onChange={(e) => {
@@ -24,6 +24,7 @@ const Skills = ({ skillLevel, setSkillLevel }) => {
 
             <label className="label-block" htmlFor="skills"></label>
             <select
+              className="input"
               value={x.level}
               onChange={(e) => {
                 const oldSkillLevel = [...skillLevel];
@@ -45,6 +46,7 @@ const Skills = ({ skillLevel, setSkillLevel }) => {
       })}
       <div>
         <button
+          className="add-button"
           type="button"
           onClick={() => {
             const copiedSkillLevel = [...skillLevel];

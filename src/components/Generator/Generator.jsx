@@ -96,6 +96,7 @@ const Generator = () => {
           </form>
           <div>
             <button
+              className="preview-button"
               onClick={() => {
                 if (previewVisible) {
                   setPreviewVisible(false);

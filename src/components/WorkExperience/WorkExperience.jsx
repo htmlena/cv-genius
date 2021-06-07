@@ -13,7 +13,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 Position:
               </label>
               <input
-                className="input"
+                className="input text-input"
                 type="text"
                 value={x.position}
                 onChange={(e) => {
@@ -31,7 +31,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 Employer:
               </label>
               <input
-                className="input"
+                className="input text-input"
                 type="text"
                 value={x.company}
                 onChange={(e) => {
@@ -49,7 +49,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 City:
               </label>
               <input
-                className="input"
+                className="input text-input"
                 type="text"
                 value={x.city}
                 onChange={(e) => {
@@ -119,6 +119,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
 
       <div>
         <button
+          className="add-button"
           type="button"
           onClick={() => {
             const copiedWorkExperience = [...workExperience];

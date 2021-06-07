@@ -10,7 +10,7 @@ const Languages = ({ languageLevel, setLanguageLevel }) => {
           <div className="label-input-container">
             <label htmlFor="language"></label>
             <input
-              className="input"
+              className="input text-input"
               type="text"
               value={x.language}
               onChange={(e) => {
@@ -22,6 +22,7 @@ const Languages = ({ languageLevel, setLanguageLevel }) => {
 
             <label className="label-block" htmlFor="language"></label>
             <select
+              className="input"
               value={x.level}
               onChange={(e) => {
                 const oldLanguageLevel = [...languageLevel];
@@ -43,6 +44,7 @@ const Languages = ({ languageLevel, setLanguageLevel }) => {
       })}
       <div>
         <button
+          className="add-button"
           type="button"
           onClick={() => {
             const copiedLanguageLevel = [...languageLevel];
