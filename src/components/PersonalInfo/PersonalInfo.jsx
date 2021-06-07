@@ -16,8 +16,8 @@ const PersonalInfo = ({
   return (
     <div className="personal-info-container">
       <h2>Personal information</h2>
-      <div className="personal-info-flex">
-        <div name-surname-flex>
+      <div className="personal-info-grid">
+        <div className="name-surname-grid">
           <div className="label-input-container">
             <label className="label-block" htmlFor="name">
               Name:
@@ -48,7 +48,7 @@ const PersonalInfo = ({
             />
           </div>
         </div>
-        <div className="email-mobile-flex">
+        <div className="email-mobile-grid">
           <div className="label-input-container">
             <label className="label-block" htmlFor="email">
               E-mail:
@@ -78,7 +78,7 @@ const PersonalInfo = ({
             />
           </div>
         </div>
-        <div className="text-area-flex">
+        <div className="pi-textarea-grid">
           <label className="label-block" htmlFor="elevator-speech">
             Elevator speech:
           </label>

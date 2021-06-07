@@ -10,6 +10,10 @@
   width: 100%;
 }
 
+.work-experience-container {
+  width: 100%;
+}
+
 .label-block {
   display: block;
   color: gray;
@@ -84,18 +88,46 @@
     align-items: flex-start;
   }
 
-  .personal-info-flex {
+  .personal-info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'personalfirst personalsecond'
+      'personalthird personalthird';
     column-gap: 30px;
   }
 
-  .name-surname-flex {
+  .name-surname-grid {
+    grid-area: personalfirst;
   }
 
-  .email-mobile-flex {
+  .email-mobile-grid {
+    grid-area: personalsecond;
   }
 
-  .text-area-flex {
+  .pi-textarea-grid {
+    grid-area: personalthird;
+  }
+
+  .work-experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'workfirst worksecond'
+      'workthird workthird';
+    column-gap: 30px;
+  }
+
+  .position-empl-city-grid {
+    grid-area: workfirst;
+  }
+
+  .dates-grid {
+    grid-area: worksecond;
+  }
+
+  .we-textarea-grid {
+    grid-area: workthird;
   }
 }
