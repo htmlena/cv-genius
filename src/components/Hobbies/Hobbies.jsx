@@ -1,39 +1,29 @@
 import React from 'react';
+import '../Generator/style.scss';
 
-const Hobbies = () => {
+const Hobbies = ({ hobbies, setHobbies }) => {
   return (
-    
-    <div className="work-experience-container">
+    <div className="hobbies-container">
       <h2>Hobbies</h2>
-      {hobbies.map((x, index) => {
-        return (
-            <div className="we-textarea-grid">
-              <div className="label-input-container">
-                <label className="label-block" htmlFor="job-description">
-                  Hobbies: 
-                </label>
-                <textarea
-                  className="input"
-                  value={x.jobDescription}
-                  onChange={(e) => {
-                    const oldWorkExperience = [...workExperience];
-                    oldWorkExperience[index].jobDescription = e.target.value;
-                    setWorkExperience(oldWorkExperience);
-                  }}
-                  name="job-description"
-                  id="job-description"
-                  rows="10"
-                  cols="25"
-                  placeholder="Among my responsibilities was..."
-                ></textarea>
-              </div>
-            </div>
-      
-        ) 
-       
-       }
+      <div>
+        <div className="label-input-container">
+          <label className="label-block" htmlFor="hobby">
+            Hobbies:
+          </label>
+          <textarea
+            className="input"
+            value={hobbies}
+            onChange={(e) => setHobbies(e.target.value)}
+            name="hobby"
+            id="hobby"
+            rows="10"
+            cols="25"
+            placeholder="I like to dedicate my free time to..."
+          ></textarea>
+        </div>
+      </div>{' '}
+    </div>
+  );
+};
 
-        
-      )
-      
-} ) } 
+export default Hobbies;

@@ -139,6 +139,9 @@ export const CvView = ({
   languageLevel,
   workExperience,
   hobbies,
+  courseName,
+  organization,
+  courseDescription,
 }) => {
   return (
     <Document style={styles.document}>
@@ -280,14 +283,16 @@ export const CvView = ({
         <View style={styles.section}>
           <Text style={styles.experience}>Hobbies</Text>
           <View style={styles.skillsLevels}>
-            {hobbies.map((x) => {
-              return (
-                <View style={styles.sectionSkills}>
-                  <Text style={styles.skill}>{x.hobby}</Text>
-                </View>
-              );
-            })}
+            <View style={styles.sectionSkills}>
+              <Text style={styles.skill}>{hobbies}</Text>
+            </View>
           </View>
+        </View>
+        {/* Courses */}
+        <Text style={styles.name}>{courseName}</Text>
+        <Text style={styles.name}>{organization}</Text>
+        <View style={styles.section}>
+          <Text style={styles.elevatorSpeech}>{courseDescription}</Text>
         </View>
       </Page>
     </Document>

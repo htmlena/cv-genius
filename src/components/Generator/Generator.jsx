@@ -6,6 +6,8 @@ import Education from '../Education/Education';
 import Skills from '../Skills/Skills';
 import Languages from '../Languages/Languages';
 import WorkExperience from '../WorkExperience/WorkExperience';
+import Hobbies from '../Hobbies/Hobbies';
+import Courses from '../Courses/Courses';
 
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 
@@ -79,11 +81,8 @@ const Generator = () => {
     },
   ]);
 
-  const [hobby, setHobby] = useState([
-    {
-      hobby: '',
-    },
-  ]);
+  const [hobbies, setHobbies] = useState('');
+  const [course, setCourse] = useState('');
 
   return (
     <>
@@ -115,6 +114,9 @@ const Generator = () => {
               languageLevel={languageLevel}
               setLanguageLevel={setLanguageLevel}
             />
+            <Hobbies hobbies={hobbies} setHobbies={setHobbies} />
+
+            <Courses course={course} setCourse={setCourse} />
           </form>
           <div>
             <button
@@ -146,6 +148,8 @@ const Generator = () => {
                 education={education}
                 skillLevel={skillLevel}
                 languageLevel={languageLevel}
+                hobbies={hobbies}
+                course={course}
               />
             </PDFViewer>
           </div>
@@ -161,6 +165,8 @@ const Generator = () => {
                 education={education}
                 skillLevel={skillLevel}
                 languageLevel={languageLevel}
+                hobbies={hobbies}
+                course={course}
               />
             }
           >
