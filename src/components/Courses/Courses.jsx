@@ -51,7 +51,7 @@ const Courses = ({
             onChange={(e) => setCourseDescription(e.target.value)}
             name="course-description"
             id="course-description"
-            rows="10"
+            rows="3"
             cols="25"
             placeholder="3-month course about..."
           ></textarea>
