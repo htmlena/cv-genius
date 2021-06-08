@@ -123,21 +123,21 @@ const Generator = () => {
             <Hobbies hobbies={hobbies} setHobbies={setHobbies} />
 
             <Courses course={course} setCourse={setCourse} />
+            <div className="preview-button-container">
+              <button
+                className="preview-button"
+                onClick={() => {
+                  if (previewVisible) {
+                    setPreviewVisible(false);
+                  } else {
+                    setPreviewVisible(true);
+                  }
+                }}
+              >
+                Preview
+              </button>
+            </div>
           </form>
-          <div className="preview-button-container">
-            <button
-              className="preview-button"
-              onClick={() => {
-                if (previewVisible) {
-                  setPreviewVisible(false);
-                } else {
-                  setPreviewVisible(true);
-                }
-              }}
-            >
-              Preview
-            </button>
-          </div>
         </>
       )}
       {previewVisible && (

@@ -84,9 +84,10 @@
 }
 
 .preview-button-container {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 0 2rem 1rem;
+  padding: 1rem 0;
   position: sticky;
   bottom: 0;
   right: 0;
@@ -245,5 +246,22 @@
   .pdf-viewer {
     width: 400px;
     height: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-form-container {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 3rem;
+  }
+
+  .personal-info-grid,
+  .work-experience-grid,
+  .education-grid,
+  .skills-grid,
+  .languages-grid,
+  .courses-grid {
+    column-gap: 60px;
   }
 }
