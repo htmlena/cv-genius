@@ -23,6 +23,15 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
 
+  // Personal info
+
+  name: {
+    alignSelf: 'center',
+    fontWeight: 400,
+    fontSize: 30,
+    marginBottom: '20pt',
+  },
+
   email: {
     fontSize: 17,
     marginBottom: '10pt',
@@ -34,11 +43,16 @@ const styles = StyleSheet.create({
     marginBottom: '10pt',
   },
 
-  name: {
-    alignSelf: 'center',
+  linkedin: {
+    fontSize: 17,
     fontWeight: 400,
-    fontSize: 30,
-    marginBottom: '20pt',
+    marginBottom: '10pt',
+  },
+
+  otherurl: {
+    fontSize: 17,
+    fontWeight: 400,
+    marginBottom: '10pt',
   },
 
   container: {
@@ -54,6 +68,13 @@ const styles = StyleSheet.create({
   },
 
   section: {
+    marginBottom: '20pt',
+  },
+
+  // Job experience
+
+  sectionJob: {
+    display: 'block',
     marginBottom: '20pt',
   },
 
@@ -76,7 +97,7 @@ const styles = StyleSheet.create({
     fontWeight: 400,
   },
 
-  city: {
+  cityJob: {
     fontStyle: 'italic',
     marginBottom: '10pt',
   },
@@ -86,14 +107,63 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
 
-  sectionJob: {
+  jobDescription: {
     display: 'block',
+    textAlign: 'left',
     marginBottom: '20pt',
+  },
+
+  // Education
+
+  education: {
+    display: 'block',
+    fontSize: 20,
+    fontWeight: 400,
+    marginBottom: '17pt',
+    borderBottom: '1pt solid black',
   },
 
   sectionEducation: {
     display: 'block',
     marginBottom: '20pt',
+  },
+
+  university: {
+    fontSize: 20,
+    fontWeight: 400,
+  },
+
+  faculty: {
+    display: 'block',
+    fontSize: 17,
+    fontWeight: 400,
+  },
+
+  cityEducation: {
+    fontStyle: 'italic',
+    marginBottom: '10pt',
+  },
+
+  fieldOfStudyDegree: {
+    display: 'block',
+    fontSize: 17,
+    fontWeight: 400,
+  },
+
+  educationDescription: {
+    display: 'block',
+    textAlign: 'left',
+    marginBottom: '20pt',
+  },
+
+  // Skills
+
+  skills: {
+    display: 'block',
+    fontSize: 20,
+    fontWeight: 400,
+    marginBottom: '17pt',
+    borderBottom: '1pt solid black',
   },
 
   skillsLevels: {
@@ -110,6 +180,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 
+  // Levels
+
   sectionLevel: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -123,9 +195,95 @@ const styles = StyleSheet.create({
     display: 'flex',
   },
 
+  // Languages
+
+  languages: {
+    display: 'block',
+    fontSize: 20,
+    fontWeight: 400,
+    marginBottom: '17pt',
+    borderBottom: '1pt solid black',
+  },
+
+  languagesLevels: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
+    width: '200pt',
+  },
+
+  sectionLanguages: {
+    display: 'flex',
+    marginBottom: '20pt',
+    justifyContent: 'space-between',
+  },
+
+  language: {
+    display: 'flex',
+  },
+
+  // Hobbies
+
+  hobbies: {
+    display: 'block',
+    fontSize: 20,
+    fontWeight: 400,
+    marginBottom: '17pt',
+    borderBottom: '1pt solid black',
+  },
+
   hobby: {
     display: 'flex',
   },
+
+  hobbiesTextArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
+    width: '200pt',
+  },
+
+  sectionHobbies: {
+    display: 'flex',
+    marginBottom: '20pt',
+    justifyContent: 'space-between',
+  },
+
+  // Courses
+
+  courses: {
+    display: 'block',
+    fontSize: 20,
+    fontWeight: 400,
+    marginBottom: '17pt',
+    borderBottom: '1pt solid black',
+  },
+
+  coursesLevels: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
+    width: '200pt',
+  },
+
+  sectionCourses: {
+    display: 'flex',
+    marginBottom: '20pt',
+    justifyContent: 'space-between',
+  },
+
+  course: {
+    display: 'flex',
+  },
+
+  // courseDescription: {
+  //   display: 'block',
+  //   textAlign: 'center',
+  //   marginBottom: '20pt',
+  // },
 });
 
 export const CvView = ({
@@ -139,9 +297,7 @@ export const CvView = ({
   languageLevel,
   workExperience,
   hobbies,
-  courseName,
-  organization,
-  courseDescription,
+  course,
   linkedinUrl,
   otherUrl,
 }) => {
@@ -157,8 +313,8 @@ export const CvView = ({
             <Text style={styles.mobile}>{userMobile}</Text>
           </View>
           <View style={styles.container}>
-            <Text style={styles.email}>{linkedinUrl}</Text>
-            <Text style={styles.mobile}>{otherUrl}</Text>
+            <Text style={styles.linkedin}>{linkedinUrl}</Text>
+            <Text style={styles.otherurl}>{otherUrl}</Text>
           </View>
           <Text style={styles.elevatorSpeech}>{speech}</Text>
         </View>
@@ -178,7 +334,7 @@ export const CvView = ({
                 </View>
                 <View style={styles.container}>
                   <Text style={styles.company}>{x.company}</Text>
-                  <Text style={styles.city}>{x.city}</Text>
+                  <Text style={styles.cityJob}>{x.city}</Text>
                 </View>
                 <Text style={styles.jobDescription}>{x.jobDescription}</Text>
               </View>
@@ -196,7 +352,7 @@ export const CvView = ({
               <Text style={styles.company}>
                 Phillip and Morris company, s.r.o.
               </Text>
-              <Text style={styles.city}>Vancouver</Text>
+              <Text style={styles.cityJob}>Vancouver</Text>
             </View>
             <Text style={styles.jobDescription}>
               Among my responsibilities was to hire new employees into our
@@ -221,7 +377,7 @@ export const CvView = ({
               <Text style={styles.company}>
                 Phillip and Morris company, s.r.o.
               </Text>
-              <Text style={styles.city}>Považská Bystrica, Slovensko</Text>
+              <Text style={styles.cityJob}>Považská Bystrica, Slovensko</Text>
             </View>
             <Text style={styles.jobDescription}>
               Among my responsibilities was to hire new employees into our
@@ -231,12 +387,12 @@ export const CvView = ({
         </View>
         {/* Education 1 */}
         <View style={styles.section}>
-          <Text style={styles.experience}>Education</Text>
+          <Text style={styles.education}>Education</Text>
           {education.map((x) => {
             return (
               <View style={styles.sectionEducation}>
                 <View style={styles.container}>
-                  <Text style={styles.position}>{x.university}</Text>
+                  <Text style={styles.university}>{x.university}</Text>
                   <View style={styles.containerDates}>
                     <Text style={styles.date}>
                       {x.startDate} - {x.endDate}
@@ -244,13 +400,13 @@ export const CvView = ({
                   </View>
                 </View>
                 <View style={styles.container}>
-                  <Text style={styles.company}>{x.faculty}</Text>
-                  <Text style={styles.city}>{x.cityEducation}</Text>
+                  <Text style={styles.faculty}>{x.faculty}</Text>
+                  <Text style={styles.cityEducation}>{x.cityEducation}</Text>
                 </View>
-                <Text style={styles.company}>
+                <Text style={styles.fieldOfStudyDegree}>
                   {x.fieldOfStudy}, {x.degree}
                 </Text>
-                <Text style={styles.jobDescription}>
+                <Text style={styles.educationDescription}>
                   {x.educationDescription}
                 </Text>
               </View>
@@ -259,7 +415,7 @@ export const CvView = ({
         </View>
         {/* Skills */}
         <View style={styles.section}>
-          <Text style={styles.experience}>Skills</Text>
+          <Text style={styles.skills}>Skills</Text>
           <View style={styles.skillsLevels}>
             {skillLevel.map((x) => {
               return (
@@ -273,12 +429,12 @@ export const CvView = ({
         </View>
         {/* Languages */}
         <View style={styles.section}>
-          <Text style={styles.experience}>Languages</Text>
-          <View style={styles.skillsLevels}>
+          <Text style={styles.languages}>Languages</Text>
+          <View style={styles.languagesLevels}>
             {languageLevel.map((x) => {
               return (
-                <View style={styles.sectionSkills}>
-                  <Text style={styles.skill}>{x.language}</Text>
+                <View style={styles.sectionLanguages}>
+                  <Text style={styles.language}>{x.language}</Text>
                   <Text style={styles.level}>{x.level}</Text>
                 </View>
               );
@@ -287,18 +443,27 @@ export const CvView = ({
         </View>
         {/* Hobbies */}
         <View style={styles.section}>
-          <Text style={styles.experience}>Hobbies</Text>
-          <View style={styles.skillsLevels}>
-            <View style={styles.sectionSkills}>
-              <Text style={styles.skill}>{hobbies}</Text>
+          <Text style={styles.hobbies}>Hobbies</Text>
+          <View style={styles.hobbiesTextArea}>
+            <View style={styles.sectionHobbies}>
+              <Text style={styles.hobby}>{hobbies}</Text>
             </View>
           </View>
         </View>
         {/* Courses */}
-        <Text style={styles.name}>{courseName}</Text>
-        <Text style={styles.name}>{organization}</Text>
         <View style={styles.section}>
-          <Text style={styles.elevatorSpeech}>{courseDescription}</Text>
+          <Text style={styles.courses}>Courses</Text>
+          <View style={styles.coursesLevels}>
+            {course.map((x) => {
+              return (
+                <View style={styles.sectionCourses}>
+                  <Text style={styles.course}>{x.courseName}</Text>
+                  <Text style={styles.course}>{x.organization}</Text>
+                  <Text style={styles.course}>{x.courseDescription}</Text>
+                </View>
+              );
+            })}
+          </View>
         </View>
       </Page>
     </Document>

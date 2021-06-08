@@ -84,7 +84,14 @@ const Generator = () => {
   ]);
 
   const [hobbies, setHobbies] = useState('');
-  const [course, setCourse] = useState('');
+
+  const [course, setCourse] = useState([
+    {
+      courseName: '',
+      organization: '',
+      courseDescription: '',
+    },
+  ]);
 
   return (
     <>
@@ -123,6 +130,7 @@ const Generator = () => {
             <Hobbies hobbies={hobbies} setHobbies={setHobbies} />
 
             <Courses course={course} setCourse={setCourse} />
+
             <div className="preview-button-container">
               <button
                 className="preview-button"
