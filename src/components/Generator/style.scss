@@ -55,6 +55,11 @@
   justify-content: center;
 }
 
+.pdf-viewer {
+  width: 300px;
+  height: 500px;
+}
+
 .input {
   border: 1px solid #f2f5fa;
   background-color: #f2f5fa;
@@ -98,6 +103,28 @@
 
 .preview-button:hover,
 .preview-button:focus {
+  cursor: pointer;
+  background-color: #3c64b1;
+  color: white;
+}
+
+.download-button-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.download-button {
+  border: 1px solid #3c64b1;
+  background-color: white;
+  color: #3c64b1;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.download-button:hover,
+.download-button:focus {
   cursor: pointer;
   background-color: #3c64b1;
   color: white;
@@ -213,5 +240,10 @@
     border-radius: 0.5rem;
     font-weight: 400;
     padding: 1rem 3rem;
+  }
+
+  .pdf-viewer {
+    width: 400px;
+    height: 600px;
   }
 }

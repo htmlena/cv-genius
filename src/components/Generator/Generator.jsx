@@ -142,8 +142,11 @@ const Generator = () => {
       )}
       {previewVisible && (
         <>
+          <div className="download-button-container">
+            <button className="download-button">Download CV</button>
+          </div>
           <div className="preview">
-            <PDFViewer width="300px" height="500px">
+            <PDFViewer className="pdf-viewer">
               <CvView
                 userName={userName}
                 userSurname={userSurname}
@@ -161,6 +164,7 @@ const Generator = () => {
               />
             </PDFViewer>
           </div>
+
           <PDFDownloadLink
             document={
               <CvView
@@ -179,9 +183,7 @@ const Generator = () => {
                 otherUrl={otherUrl}
               />
             }
-          >
-            <button>Download CV</button>
-          </PDFDownloadLink>
+          ></PDFDownloadLink>
         </>
       )}
     </>
