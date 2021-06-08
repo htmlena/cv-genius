@@ -4,7 +4,8 @@ import './style.css';
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="nav-container">
+      <div className="logo">CV Genius</div>
       <ul className="nav-list__container">
         <li className="nav-list">
           <Link className="nav-link" to="/">

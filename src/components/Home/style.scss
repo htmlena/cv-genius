@@ -76,4 +76,15 @@ p {
 }
 
 @media (min-width: 688px) {
+  .image-home {
+    padding-top: 1.5rem;
+    width: 30rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .image-home {
+    padding-top: 1.7rem;
+    width: 40rem;
+  }
 }
