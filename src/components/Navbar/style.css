@@ -3,7 +3,7 @@
   justify-content: space-around;
   list-style-type: none;
   margin: 0;
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: #e8edf6;
 }
 
@@ -12,7 +12,8 @@
 
 .nav-link {
   text-decoration: none;
-  color: #373f41;
+  color: #3c64b1;
+  font-weight: 700;
 }
 
 .nav-link:hover,

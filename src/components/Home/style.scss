@@ -1,7 +1,3 @@
-// .container-homepage {
-//   padding:
-// }
-
 .container-home {
   padding: 2rem;
   display: flex;
@@ -12,14 +8,14 @@
 }
 
 .create-cv {
-  width: 10rem;
-  height: 3rem;
+  padding: 1rem 1.5rem;
   border: 1px solid #3c64b1;
   background-color: white;
   color: #3c64b1;
   border-radius: 0.5rem;
   font-weight: 400;
   margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 .image-home {
@@ -67,4 +63,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+p {
+  line-height: 1.6;
+}
+
+@media (min-width: 375px) {
+  .header-medium {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 688px) {
 }

@@ -124,7 +124,7 @@ const Generator = () => {
 
             <Courses course={course} setCourse={setCourse} />
           </form>
-          <div>
+          <div className="preview-button-container">
             <button
               className="preview-button"
               onClick={() => {

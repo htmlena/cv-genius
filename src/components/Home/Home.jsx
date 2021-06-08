@@ -16,7 +16,7 @@ const Home = () => {
         <img className="image-home" src={imagehome} alt="computer"></img>
       </div>
       <div className="container-home-guide">
-        <h2>
+        <h2 className="header-medium">
           Follow the tips that will lead you through the creation of your CV
         </h2>
         <p>
@@ -30,7 +30,7 @@ const Home = () => {
         <img className="cv-example" src={cvexample} alt="cv-example" />
       </div>
       <div className="container-home-statistics">
-        <h2>Did you know that...</h2>
+        <h2 className="header-medium">Did you know that...</h2>
         <div className="container-home-numbers-text">
           <div className="container-home-numbers">
             <p>7%</p>
@@ -45,7 +45,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container-home-action">
-        <h2>Let the journey begin!</h2>
+        <h2 className="header-medium">Let the journey begin!</h2>
         <p>Create a custom CV for a position you are applying for.</p>
         <button className="create-cv">Create your CV</button>
       </div>

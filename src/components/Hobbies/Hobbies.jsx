@@ -3,7 +3,7 @@ import '../Generator/style.scss';
 
 const Hobbies = ({ hobbies, setHobbies }) => {
   return (
-    <div>
+    <div className="hobbies-container">
       <h2>Hobbies</h2>
       <div className="hobbies-textarea-grid">
         <div className="label-input-container">
@@ -14,7 +14,7 @@ const Hobbies = ({ hobbies, setHobbies }) => {
             onChange={(e) => setHobbies(e.target.value)}
             name="hobby"
             id="hobby"
-            rows="10"
+            rows="3"
             cols="25"
             placeholder="I like to dedicate my free time to..."
           ></textarea>

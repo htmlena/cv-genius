@@ -13,35 +13,34 @@ const Courses = ({
     <div className="courses-container">
       <h2>Courses</h2>
       <div className="courses-grid">
-        <div className="course-company-grid">
-          <div className="label-input-container">
-            <label className="label-block" htmlFor="course-name">
-              Course Name:
-            </label>
-            <input
-              className="input text-input"
-              type="text"
-              value={courseName}
-              onChange={(e) => setCourseName(e.target.value)}
-              name="course-name"
-              id="course-name"
-            />
-          </div>
-
-          <div className="label-input-container">
-            <label className="label-block" htmlFor="organization">
-              Organization:
-            </label>
-            <input
-              className="input text-input"
-              type="text"
-              value={organization}
-              onChange={(e) => setOrganization(e.target.value)}
-              name="organization"
-              id="organization"
-            />
-          </div>
+        <div className="label-input-container course-name-grid">
+          <label className="label-block" htmlFor="course-name">
+            Course Name:
+          </label>
+          <input
+            className="input text-input"
+            type="text"
+            value={courseName}
+            onChange={(e) => setCourseName(e.target.value)}
+            name="course-name"
+            id="course-name"
+          />
         </div>
+
+        <div className="label-input-container organization-grid">
+          <label className="label-block" htmlFor="organization">
+            Organization:
+          </label>
+          <input
+            className="input text-input"
+            type="text"
+            value={organization}
+            onChange={(e) => setOrganization(e.target.value)}
+            name="organization"
+            id="organization"
+          />
+        </div>
+
         <div className="c-textarea-grid">
           <label className="label-block" htmlFor="course-description">
             Course description:

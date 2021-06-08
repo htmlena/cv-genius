@@ -1,5 +1,5 @@
 .main-form-container {
-  padding: 2rem;
+  padding: 2rem 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,14 @@
 }
 
 .education-container {
+  width: 100%;
+}
+
+.courses-container {
+  width: 100%;
+}
+
+.hobbies-container {
   width: 100%;
 }
 
@@ -68,6 +76,15 @@
 .add-button:focus {
   cursor: pointer;
   background-color: #f2f5fa;
+}
+
+.preview-button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2rem 1rem;
+  position: sticky;
+  bottom: 0;
+  right: 0;
 }
 
 .preview-button {
@@ -165,5 +182,36 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
+  }
+
+  .courses-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'coursefirst coursesecond'
+      'coursethird coursethird';
+    column-gap: 30px;
+  }
+
+  .course-name-grid {
+    grid-area: coursefirst;
+  }
+
+  .organization-grid {
+    grid-area: coursesecond;
+  }
+
+  .c-textarea-grid {
+    grid-area: coursethird;
+  }
+
+  .preview-button {
+    border: 1px solid #3c64b1;
+    background-color: white;
+    color: #3c64b1;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    padding: 1rem 3rem;
   }
 }

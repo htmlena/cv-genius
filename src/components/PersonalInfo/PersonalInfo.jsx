@@ -51,6 +51,20 @@ const PersonalInfo = ({
               required
             />
           </div>
+
+          <div className="label-input-container">
+            <label className="label-block" htmlFor="linkedinUrl">
+              Linkedin URL:
+            </label>
+            <input
+              className="input text-input"
+              type="url"
+              value={linkedinUrl}
+              onChange={(e) => setLinkedinUrl(e.target.value)}
+              name="linkedinUrl"
+              id="linkedinUrl"
+            />
+          </div>
         </div>
         <div className="email-mobile-grid">
           <div className="label-input-container">
@@ -81,23 +95,6 @@ const PersonalInfo = ({
               required
             />
           </div>
-        </div>
-
-        <div className="linkedin-otherUrl-grid">
-          <div className="label-input-container">
-            <label className="label-block" htmlFor="linkedinUrl">
-              Linkedin URL:
-            </label>
-            <input
-              className="input text-input"
-              type="url"
-              value={linkedinUrl}
-              onChange={(e) => setLinkedinUrl(e.target.value)}
-              name="linkedinUrl"
-              id="linkedinUrl"
-            />
-          </div>
-
           <div className="label-input-container">
             <label className="label-block" htmlFor="otherUrl">
               Other URL:
