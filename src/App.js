@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Generator from './components/Generator/Generator';
 import About from './components/About/About';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
@@ -26,6 +27,9 @@ const App = () => {
             </Route>
           </Switch>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </Router>
   );

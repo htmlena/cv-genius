@@ -25,7 +25,6 @@
 }
 
 .container-home-guide {
-  background-color: #e8edf6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,10 +36,25 @@
 .cv-example {
   width: 10rem;
   height: auto;
+  margin: 2rem 0 0;
+}
+
+.statistics {
+  text-align: justify;
+  line-height: 1.6;
+  list-style-type: circle;
+  list-style-position: inside;
+  padding: 0;
+}
+
+.statistics-list {
+  margin-top: 1rem;
 }
 
 .container-home-statistics {
   padding: 2rem;
+  background-color: #505bbb;
+  color: white;
 }
 
 .container-home-numbers-text {
@@ -56,7 +70,7 @@
 }
 
 .container-home-action {
-  background-color: #e8edf6;
+  background-color: white;
   padding: 2rem;
   display: flex;
   flex-direction: column;

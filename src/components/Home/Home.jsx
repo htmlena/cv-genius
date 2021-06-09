@@ -15,7 +15,7 @@ const Home = () => {
         <button className="create-cv">Create your CV</button>
         <img className="image-home" src={imagehome} alt="computer"></img>
       </div>
-      <div className="container-home-guide">
+      {/* <div className="container-home-guide">
         <h2 className="header-medium">
           Follow the tips that will lead you through the creation of your CV
         </h2>
@@ -28,11 +28,29 @@ const Home = () => {
           sent.
         </p>
         <img className="cv-example" src={cvexample} alt="cv-example" />
-      </div>
+      </div> */}
       <div className="container-home-statistics">
         <h2 className="header-medium">Did you know that...</h2>
         <div className="container-home-numbers-text">
-          <div className="container-home-numbers">
+          <div>
+            <ul className="statistics">
+              <li className="statistics-list">
+                On average, 10% of job applications result in interview invites.
+              </li>
+              <li className="statistics-list">
+                Out of those who land the interview, 20% are offered the job.
+              </li>
+              <li className="statistics-list">
+                Depending on the study, the job application success rate is
+                between 2% and 3.4%.
+              </li>
+              <li className="statistics-list">
+                This means that, on average, you need to send between 30 and 50
+                resumes to get hired.
+              </li>
+            </ul>
+          </div>
+          {/* <div className="container-home-numbers">
             <p>7%</p>
             <p>10%</p>
             <p>55%</p>
@@ -41,13 +59,14 @@ const Home = () => {
             <p>CV seen by recruiters.</p>
             <p>Get to the second round.</p>
             <p>Get the job.</p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="container-home-action">
         <h2 className="header-medium">Let the journey begin!</h2>
         <p>Create a custom CV for a position you are applying for.</p>
         <button className="create-cv">Create your CV</button>
+        <img className="cv-example" src={cvexample} alt="cv-example" />
       </div>
     </div>
   );
