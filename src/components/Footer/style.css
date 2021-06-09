@@ -1,13 +1,14 @@
 .footer-container {
-  padding: 1rem;
-  color: #373f41;
-  background-color: rgba(80, 91, 188, 0.3);
-}
-
-.footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
+  color: #373f41;
+  background-color: #e8edf6;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .developed-links-container {

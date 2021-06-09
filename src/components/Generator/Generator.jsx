@@ -8,7 +8,6 @@ import Languages from '../Languages/Languages';
 import WorkExperience from '../WorkExperience/WorkExperience';
 import Hobbies from '../Hobbies/Hobbies';
 import Courses from '../Courses/Courses';
-
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 
 const Generator = () => {
@@ -150,8 +149,8 @@ const Generator = () => {
       )}
       {previewVisible && (
         <>
-          <div className="download-button-container">
-            <button className="download-button">Download CV</button>
+          <div className="buttons-container">
+            <button className="back-button">Back to Form</button>
           </div>
           <div className="preview">
             <PDFViewer className="pdf-viewer">
@@ -191,7 +190,9 @@ const Generator = () => {
                 otherUrl={otherUrl}
               />
             }
-          ></PDFDownloadLink>
+          >
+            <button className="download-button">Download CV</button>
+          </PDFDownloadLink>
         </>
       )}
     </>
