@@ -13,8 +13,8 @@ const Home = () => {
           Looking for a job can be challenging, but we are here to empower you
           to make the best first impression with your CV.
         </p>
-        <Link className="create-cv-link" to="/cv-generator">
-          <button className="create-cv">Create your CV</button>
+        <Link className="create-cv" to="/cv-generator">
+          Create your CV
         </Link>
         <img className="image-home" src={imagehome} alt="computer"></img>
       </div>
@@ -50,8 +50,8 @@ const Home = () => {
       <div className="container-home-action">
         <h2 className="header-medium">Let the journey begin!</h2>
         <p>Create a custom CV for a position you are applying for.</p>
-        <Link to="/cv-generator">
-          <button className="create-cv">Create your CV</button>
+        <Link className="create-cv" to="/cv-generator">
+          Create your CV
         </Link>
         <img className="cv-example" src={cvexample} alt="cv-example" />
       </div>
