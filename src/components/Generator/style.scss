@@ -109,9 +109,9 @@
   color: white;
 }
 
-.download-button-container {
+.buttons-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 2rem;
 }
 
@@ -126,6 +126,22 @@
 
 .download-button:hover,
 .download-button:focus {
+  cursor: pointer;
+  background-color: #3c64b1;
+  color: white;
+}
+
+.back-button {
+  border: 1px solid #3c64b1;
+  background-color: white;
+  color: #3c64b1;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.back-button:hover,
+.back-button:focus {
   cursor: pointer;
   background-color: #3c64b1;
   color: white;
