@@ -5,7 +5,11 @@ import './style.css';
 const Navbar = () => {
   return (
     <nav className="nav-container">
-      <div className="logo">CV Genius</div>
+      <div className="logo">
+        <Link className="logo-link" to="/">
+          CV Genius
+        </Link>
+      </div>
       <ul className="nav-list__container">
         <li className="nav-list">
           <Link className="nav-link" to="/">
