@@ -25,11 +25,18 @@ const styles = StyleSheet.create({
 
   // Personal info
 
+  personalInfo: {
+    backgroundColor: '#e8edf6',
+    marginBottom: '17pt',
+    marginTop: '17pt',
+    padding: '20pt',
+  },
+
   name: {
     alignSelf: 'center',
     fontWeight: 400,
     fontSize: 30,
-    marginBottom: '20pt',
+    marginBottom: '17pt',
   },
 
   email: {
@@ -64,12 +71,13 @@ const styles = StyleSheet.create({
   elevatorSpeech: {
     display: 'block',
     textAlign: 'center',
-    marginBottom: '20pt',
+    marginBottom: '17pt',
+    marginTop: '25pt',
   },
 
-  section: {
-    marginBottom: '20pt',
-  },
+  // section: {
+  //   marginBottom: '20pt',
+  // },
 
   // Job experience
 
@@ -82,8 +90,9 @@ const styles = StyleSheet.create({
     display: 'block',
     fontSize: 20,
     fontWeight: 400,
+    color: '#3c64b1',
     marginBottom: '17pt',
-    borderBottom: '1pt solid black',
+    borderBottom: '1pt solid #3c64b1',
   },
 
   position: {
@@ -120,7 +129,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 400,
     marginBottom: '17pt',
-    borderBottom: '1pt solid black',
+    color: '#3c64b1',
+    borderBottom: '1pt solid #3c64b1',
   },
 
   sectionEducation: {
@@ -163,7 +173,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 400,
     marginBottom: '17pt',
-    borderBottom: '1pt solid black',
+    color: '#3c64b1',
+    borderBottom: '1pt solid #3c64b1',
   },
 
   skillsLevels: {
@@ -177,13 +188,6 @@ const styles = StyleSheet.create({
   sectionSkills: {
     display: 'flex',
     marginBottom: '20pt',
-    justifyContent: 'space-between',
-  },
-
-  // Levels
-
-  sectionLevel: {
-    display: 'flex',
     justifyContent: 'space-between',
   },
 
@@ -202,7 +206,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 400,
     marginBottom: '17pt',
-    borderBottom: '1pt solid black',
+    color: '#3c64b1',
+    borderBottom: '1pt solid #3c64b1',
   },
 
   languagesLevels: {
@@ -230,7 +235,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 400,
     marginBottom: '17pt',
-    borderBottom: '1pt solid black',
+    color: '#3c64b1',
+    borderBottom: '1pt solid #3c64b1',
   },
 
   hobby: {
@@ -258,7 +264,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 400,
     marginBottom: '17pt',
-    borderBottom: '1pt solid black',
+    color: '#3c64b1',
+    borderBottom: '1pt solid #3c64b1',
   },
 
   coursesLevels: {
@@ -304,19 +311,21 @@ export const CvView = ({
   return (
     <Document style={styles.document}>
       <Page style={styles.page} size="A4">
-        <Text style={styles.name}>
-          {userName} {userSurname}
-        </Text>
-        <View style={styles.section}>
-          <View style={styles.container}>
-            <Text style={styles.email}>{userEmail}</Text>
-            <Text style={styles.mobile}>{userMobile}</Text>
+        <View style={styles.personalInfo}>
+          <Text style={styles.name}>
+            {userName} {userSurname}
+          </Text>
+          <View style={styles.section}>
+            <View style={styles.container}>
+              <Text style={styles.email}>{userEmail}</Text>
+              <Text style={styles.mobile}>{userMobile}</Text>
+            </View>
+            <View style={styles.container}>
+              <Text style={styles.linkedin}>{linkedinUrl}</Text>
+              <Text style={styles.otherurl}>{otherUrl}</Text>
+            </View>
+            <Text style={styles.elevatorSpeech}>{speech}</Text>
           </View>
-          <View style={styles.container}>
-            <Text style={styles.linkedin}>{linkedinUrl}</Text>
-            <Text style={styles.otherurl}>{otherUrl}</Text>
-          </View>
-          <Text style={styles.elevatorSpeech}>{speech}</Text>
         </View>
         {/* Job experience 1 */}
         <View style={styles.section}>
