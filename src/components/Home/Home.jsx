@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 import imagehome from './img/computer.jpg';
+import imagestatistics from './img/cv-graphic.jpg';
+import imageMainHome from './img/main-home-picture.jpg';
 import cvexample from './img/cv-example.jpg';
 
 const Home = () => {
@@ -16,7 +18,11 @@ const Home = () => {
         <Link className="create-cv-link" to="/cv-generator">
           <button className="create-cv">Create your CV</button>
         </Link>
-        <img className="image-home" src={imagehome} alt="computer"></img>
+        <img
+          className="image-home"
+          src={imageMainHome}
+          alt="main-home-graphic"
+        ></img>
       </div>
       <div className="container-home-statistics">
         <h2 className="header-medium">Did you know that...</h2>
@@ -33,8 +39,11 @@ const Home = () => {
                 The job application success rate is between 2% and 3.4%.
               </li>
             </ul>
-            <p>Your CV really matters if you want to get the job</p>
+            <p className="statistics-text">
+              Your CV really matters if you want to get the job.
+            </p>
           </div>
+
           {/* <div className="container-home-numbers">
             <p>7%</p>
             <p>10%</p>
@@ -45,6 +54,13 @@ const Home = () => {
             <p>Get to the second round.</p>
             <p>Get the job.</p>
           </div> */}
+        </div>
+        <div className="cv-statistic-flex">
+          <img
+            className="cv-statistics"
+            src={imagestatistics}
+            alt="cv-graphic"
+          ></img>
         </div>
       </div>
       <div className="container-home-action">

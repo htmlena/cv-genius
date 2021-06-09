@@ -18,13 +18,14 @@
 
 .nav-link {
   text-decoration: none;
-  color: #505bbb;
+  color: #3c64b1;
   font-weight: 700;
   margin-right: 2rem;
 }
 
 .nav-link:hover,
 .nav-link:focus {
+  color: #ed7d2c;
 }
 
 .logo {
@@ -38,7 +39,7 @@
 }
 
 .logo-link {
-  color: #505bbb;
+  color: #3c64b1;
   text-decoration: none;
 }
 

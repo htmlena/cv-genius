@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
@@ -10,7 +10,7 @@ const Navbar = () => {
           CV Genius
         </Link>
       </div>
-      <ul className="nav-list__container">
+      <ul>
         <li className="nav-list">
           <Link className="nav-link" to="/">
             Home

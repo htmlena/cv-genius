@@ -57,7 +57,7 @@
 
 .container-home-statistics {
   padding: 2rem;
-  background-color: #505bbb;
+  background-color: #3c64b1;
   color: white;
 }
 
@@ -71,6 +71,21 @@
 
 .container-home-text {
   margin-left: 1rem;
+}
+
+.statistics-text {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.cv-statistics {
+  width: 15rem;
+  height: auto;
+}
+
+.cv-statistic-flex {
+  display: flex;
+  justify-content: center;
 }
 
 .container-home-action {
