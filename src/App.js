@@ -27,9 +27,6 @@ const App = () => {
             </Route>
           </Switch>
         </main>
-        <footer>
-          <Footer />
-        </footer>
       </div>
     </Router>
   );

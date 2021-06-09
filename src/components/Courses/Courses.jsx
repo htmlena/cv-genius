@@ -8,8 +8,11 @@ const Courses = ({ course, setCourse }) => {
       <div className="courses-grid">
         {course.map((x, index) => {
           return (
-            <>
-              <div className="label-input-container course-name-grid">
+            <div key={x.courseName + index}>
+              <div
+                key={x.courseName + index}
+                className="label-input-container course-name-grid"
+              >
                 <label className="label-block" htmlFor="course-name">
                   Course Name:
                 </label>
@@ -64,7 +67,7 @@ const Courses = ({ course, setCourse }) => {
                   placeholder="3-month course about..."
                 ></textarea>
               </div>
-            </>
+            </div>
           );
         })}
       </div>
