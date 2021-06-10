@@ -6,6 +6,7 @@ import {
   Document,
   StyleSheet,
   Font,
+  BlobProvider,
 } from '@react-pdf/renderer';
 import '../PersonalInfo/PersonalInfo';
 
@@ -25,8 +26,15 @@ const styles = StyleSheet.create({
 
   // Personal info
 
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
   personalInfo: {
-    backgroundColor: '#e8edf6',
+    backgroundColor: '#3c64b1',
+    color: 'white',
     marginBottom: '17pt',
     marginTop: '17pt',
     padding: '20pt',
@@ -35,44 +43,40 @@ const styles = StyleSheet.create({
   name: {
     alignSelf: 'center',
     fontWeight: 400,
-    fontSize: 30,
+    fontSize: 25,
     marginBottom: '17pt',
   },
 
   email: {
-    fontSize: 17,
+    fontSize: 14,
     marginBottom: '10pt',
   },
 
   mobile: {
-    fontSize: 17,
+    fontSize: 14,
     fontWeight: 400,
     marginBottom: '10pt',
   },
 
   linkedin: {
-    fontSize: 17,
+    fontSize: 14,
     fontWeight: 400,
     marginBottom: '10pt',
   },
 
   otherurl: {
-    fontSize: 17,
+    fontSize: 14,
     fontWeight: 400,
     marginBottom: '10pt',
-  },
-
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
   },
 
   elevatorSpeech: {
     display: 'block',
     textAlign: 'center',
-    marginBottom: '17pt',
-    marginTop: '25pt',
+    textSize: '20pt',
+    marginBottom: '15pt',
+    marginTop: '20pt',
+    lineHeight: '1.3pt',
   },
 
   // section: {
@@ -80,11 +84,6 @@ const styles = StyleSheet.create({
   // },
 
   // Job experience
-
-  sectionJob: {
-    display: 'block',
-    marginBottom: '20pt',
-  },
 
   experience: {
     display: 'block',
@@ -95,31 +94,39 @@ const styles = StyleSheet.create({
     borderBottom: '1pt solid #3c64b1',
   },
 
-  position: {
-    fontSize: 20,
-    fontWeight: 400,
-  },
-
-  company: {
+  sectionJob: {
     display: 'block',
-    fontSize: 17,
-    fontWeight: 400,
+    marginBottom: '20pt',
   },
 
-  cityJob: {
-    fontStyle: 'italic',
-    marginBottom: '10pt',
+  position: {
+    fontSize: 17,
+    fontWeight: 900,
+    marginBottom: '5pt',
   },
 
   containerDates: {
     display: 'flex',
     fontStyle: 'italic',
+    fontSize: 14,
+  },
+
+  company: {
+    display: 'block',
+    fontSize: 14,
+    fontWeight: 400,
+    marginBottom: '10pt',
+  },
+
+  cityJob: {
+    fontStyle: 'italic',
+    fontSize: 14,
   },
 
   jobDescription: {
     display: 'block',
     textAlign: 'left',
-    marginBottom: '20pt',
+    lineHeight: '1.3pt',
   },
 
   // Education
@@ -139,31 +146,33 @@ const styles = StyleSheet.create({
   },
 
   university: {
-    fontSize: 20,
-    fontWeight: 400,
+    fontSize: 17,
+    fontWeight: 900,
+    marginBottom: '5pt',
   },
 
   faculty: {
     display: 'block',
-    fontSize: 17,
+    fontSize: 14,
     fontWeight: 400,
+    marginBottom: '10pt',
   },
 
   cityEducation: {
     fontStyle: 'italic',
-    marginBottom: '10pt',
   },
 
   fieldOfStudyDegree: {
     display: 'block',
-    fontSize: 17,
+    fontSize: 14,
     fontWeight: 400,
+    marginBottom: '10pt',
   },
 
   educationDescription: {
     display: 'block',
     textAlign: 'left',
-    marginBottom: '20pt',
+    lineHeight: '1.3pt',
   },
 
   // Skills
@@ -187,8 +196,8 @@ const styles = StyleSheet.create({
 
   sectionSkills: {
     display: 'flex',
-    marginBottom: '20pt',
     justifyContent: 'space-between',
+    marginBottom: '17pt',
   },
 
   skill: {
@@ -220,44 +229,21 @@ const styles = StyleSheet.create({
 
   sectionLanguages: {
     display: 'flex',
-    marginBottom: '20pt',
     justifyContent: 'space-between',
+    marginBottom: '20pt',
   },
 
   language: {
     display: 'flex',
   },
 
-  // Hobbies
+  // Courses
 
-  hobbies: {
-    display: 'block',
-    fontSize: 20,
-    fontWeight: 400,
-    marginBottom: '17pt',
-    color: '#3c64b1',
-    borderBottom: '1pt solid #3c64b1',
-  },
-
-  hobby: {
-    display: 'flex',
-  },
-
-  hobbiesTextArea: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    justifyContent: 'flex-start',
-    width: '200pt',
-  },
-
-  sectionHobbies: {
+  sectionCourses: {
     display: 'flex',
     marginBottom: '20pt',
     justifyContent: 'space-between',
   },
-
-  // Courses
 
   courses: {
     display: 'block',
@@ -276,14 +262,22 @@ const styles = StyleSheet.create({
     width: '200pt',
   },
 
-  sectionCourses: {
-    display: 'flex',
-    marginBottom: '20pt',
-    justifyContent: 'space-between',
-  },
-
   course: {
     display: 'flex',
+    fontSize: '14pt',
+    fontWeight: 400,
+    marginBottom: '5pt',
+  },
+
+  organization: {
+    display: 'flex',
+    marginBottom: '10pt',
+  },
+
+  courseDescription: {
+    display: 'block',
+    textAlign: 'left',
+    lineHeight: '1.3pt',
   },
 
   // courseDescription: {
@@ -291,6 +285,33 @@ const styles = StyleSheet.create({
   //   textAlign: 'center',
   //   marginBottom: '20pt',
   // },
+
+  // Hobbies
+
+  sectionHobbies: {
+    display: 'flex',
+    marginBottom: '20pt',
+    justifyContent: 'space-between',
+  },
+
+  hobbies: {
+    display: 'block',
+    fontSize: 20,
+    fontWeight: 400,
+    marginBottom: '17pt',
+    color: '#3c64b1',
+    borderBottom: '1pt solid #3c64b1',
+  },
+
+  hobby: {
+    display: 'flex',
+  },
+
+  hobbiesTextArea: {
+    display: 'block',
+    textAlign: 'left',
+    lineHeight: '1.3pt',
+  },
 });
 
 export const CvView = ({
@@ -413,7 +434,7 @@ export const CvView = ({
                   <Text style={styles.cityEducation}>{x.cityEducation}</Text>
                 </View>
                 <Text style={styles.fieldOfStudyDegree}>
-                  {x.fieldOfStudy}, {x.degree}
+                  {x.fieldOfStudy} ,{x.degree}
                 </Text>
                 <Text style={styles.educationDescription}>
                   {x.educationDescription}
@@ -450,15 +471,6 @@ export const CvView = ({
             })}
           </View>
         </View>
-        {/* Hobbies */}
-        <View style={styles.section}>
-          <Text style={styles.hobbies}>Hobbies</Text>
-          <View style={styles.hobbiesTextArea}>
-            <View style={styles.sectionHobbies}>
-              <Text style={styles.hobby}>{hobbies}</Text>
-            </View>
-          </View>
-        </View>
         {/* Courses */}
         <View style={styles.section}>
           <Text style={styles.courses}>Courses</Text>
@@ -467,11 +479,22 @@ export const CvView = ({
               return (
                 <View style={styles.sectionCourses}>
                   <Text style={styles.course}>{x.courseName}</Text>
-                  <Text style={styles.course}>{x.organization}</Text>
-                  <Text style={styles.course}>{x.courseDescription}</Text>
+                  <Text style={styles.organization}>{x.organization}</Text>
+                  <Text style={styles.courseDescription}>
+                    {x.courseDescription}
+                  </Text>
                 </View>
               );
             })}
+          </View>
+        </View>
+        {/* Hobbies */}
+        <View style={styles.section}>
+          <Text style={styles.hobbies}>Hobbies</Text>
+          <View style={styles.hobbiesTextArea}>
+            <View style={styles.sectionHobbies}>
+              <Text style={styles.hobby}>{hobbies}</Text>
+            </View>
           </View>
         </View>
       </Page>

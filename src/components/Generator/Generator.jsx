@@ -126,9 +126,10 @@ const Generator = () => {
               languageLevel={languageLevel}
               setLanguageLevel={setLanguageLevel}
             />
-            <Hobbies hobbies={hobbies} setHobbies={setHobbies} />
 
             <Courses course={course} setCourse={setCourse} />
+
+            <Hobbies hobbies={hobbies} setHobbies={setHobbies} />
 
             <div className="preview-button-container">
               <button

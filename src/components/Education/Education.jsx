@@ -68,10 +68,10 @@ const Education = ({ education, setEducation }) => {
                 <input
                   className="input text-input"
                   type="text"
-                  value={x.city}
+                  value={x.cityEducation}
                   onChange={(e) => {
                     const oldEducation = [...education];
-                    oldEducation[index].city = e.target.value;
+                    oldEducation[index].cityEducation = e.target.value;
                     setEducation(oldEducation);
                   }}
                   name="city-education"
