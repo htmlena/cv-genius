@@ -150,7 +150,18 @@ const Generator = () => {
       {previewVisible && (
         <>
           <div className="buttons-container">
-            <button className="back-button">Back to Form</button>
+            <button
+              className="back-button"
+              onClick={() => {
+                if (previewVisible) {
+                  setPreviewVisible(false);
+                } else {
+                  setPreviewVisible(true);
+                }
+              }}
+            >
+              Back to Form
+            </button>
           </div>
           <div className="preview">
             <PDFViewer className="pdf-viewer">
