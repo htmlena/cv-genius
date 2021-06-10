@@ -12,12 +12,12 @@ const Home = () => {
     <>
       <div className="container-homepage">
         <div className="container-home">
-          <h1>Create a CV that will land you a job</h1>
-          <p>
+          <h1 class="home-header">Create a CV that will land you a job</h1>
+          <p class="home-header-text">
             Looking for a job can be challenging, but we are here to empower you
             to make the best first impression with your CV.
           </p>
-          <Link className="create-cv" to="/cv-generator">
+          <Link className="create-cv button-top" to="/cv-generator">
             Create your CV
           </Link>
           <img
@@ -29,7 +29,7 @@ const Home = () => {
         <div className="container-home-statistics">
           <h2 className="header-medium">Did you know that...</h2>
           <div className="container-home-numbers-text">
-            <div>
+            <div className="statistics-container">
               <ul className="statistics">
                 <li className="statistics-list">
                   On average, 10% of job applications result in interview
@@ -43,20 +43,9 @@ const Home = () => {
                 </li>
               </ul>
               <p className="statistics-text">
-                Your CV really matters if you want to get the job.
+                Your CV really matters if you want to get the job
               </p>
             </div>
-
-            {/* <div className="container-home-numbers">
-            <p>7%</p>
-            <p>10%</p>
-            <p>55%</p>
-          </div>
-          <div className="container-home-text">
-            <p>CV seen by recruiters.</p>
-            <p>Get to the second round.</p>
-            <p>Get the job.</p>
-          </div> */}
           </div>
           <div className="cv-statistic-flex">
             <img

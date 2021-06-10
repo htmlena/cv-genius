@@ -125,6 +125,63 @@ p {
 @media (min-width: 992px) {
   .image-home {
     padding-top: 1.7rem;
-    width: 40rem;
+    width: 35rem;
+  }
+
+  .home-header-text {
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  .home-header {
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  .container-home {
+    max-width: 80%;
+    width: 992px;
+    padding: 6rem 2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'headername homeimage'
+      'headertext homeimage'
+      'homebutton homeimage';
+    column-gap: 30px;
+  }
+
+  .button-top {
+    max-width: 65%;
+    margin: 0 auto;
+  }
+
+  .home-header {
+    grid-area: headername;
+  }
+
+  .home-header-text {
+    grid-area: headertext;
+  }
+
+  .create-cv {
+    grid-area: homebutton;
+  }
+
+  .image-home {
+    grid-area: homeimage;
+  }
+
+  .container-home-statistics {
+    padding: 4rem 6rem;
+    // padding: 2rem;
+    // background-color: #3c64b1;
+    // color: white;
+  }
+
+  .statistics-container {
+    margin: 1rem 0 2rem;
   }
 }
