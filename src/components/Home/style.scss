@@ -19,6 +19,12 @@
   text-decoration: none;
 }
 
+.create-cv:hover,
+.create-cv:focus {
+  background-color: #3c64b1;
+  color: white;
+}
+
 .create-cv-link {
   cursor: pointer;
 }
