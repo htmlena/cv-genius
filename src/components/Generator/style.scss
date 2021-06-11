@@ -80,11 +80,15 @@
 }
 
 .add-button:hover,
-.add-button:focus,
+.add-button:focus {
+  cursor: pointer;
+  background-color: #f2f5fa;
+}
+
 .remove-button:hover,
 .remove-button:focus {
   cursor: pointer;
-  background-color: #f2f5fa;
+  color: #ed7d2c;
 }
 
 .preview-button-container {

@@ -14,8 +14,7 @@ import font from './Lato-Regular.ttf';
 
 const styles = StyleSheet.create({
   page: {
-    paddingLeft: '50pt',
-    paddingRight: '50pt',
+    padding: 50,
     display: 'flex',
     flexDirection: 'column',
     fontSize: 12,
