@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import React from 'react';
 import '../Generator/style.scss';
 
@@ -8,11 +9,8 @@ const Courses = ({ course, setCourse }) => {
       <div className="courses-grid">
         {course.map((x, index) => {
           return (
-            <div key={x.courseName + index}>
-              <div
-                key={x.courseName + index}
-                className="label-input-container course-name-grid"
-              >
+            <div key={x.id}>
+              <div className="label-input-container course-name-grid">
                 <label className="label-block" htmlFor="course-name">
                   Course Name:
                 </label>
@@ -67,6 +65,19 @@ const Courses = ({ course, setCourse }) => {
                   placeholder="3-month course about..."
                 ></textarea>
               </div>
+              {course.length > 1 && (
+                <button
+                  className="remove-button"
+                  type="button"
+                  onClick={() => {
+                    const copiedCourse = [...course];
+                    copiedCourse.splice(index, 1);
+                    setCourse(copiedCourse);
+                  }}
+                >
+                  Remove
+                </button>
+              )}
             </div>
           );
         })}
@@ -82,6 +93,7 @@ const Courses = ({ course, setCourse }) => {
               courseName: '',
               organization: '',
               courseDescription: '',
+              id: nanoid(),
             });
             setCourse(copiedCourse);
           }}

@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import React from 'react';
 import '../Generator/style.scss';
 
@@ -8,7 +9,7 @@ const Skills = ({ skillLevel, setSkillLevel }) => {
       <div className="skills-grid">
         {skillLevel.map((x, index) => {
           return (
-            <div className="label-input-container">
+            <div key={x.id} className="label-input-container">
               <label htmlFor="skills"></label>
 
               <input
@@ -42,6 +43,19 @@ const Skills = ({ skillLevel, setSkillLevel }) => {
                 <option value="advanced">Advanced</option>
                 <option value="expert">Expert</option>
               </select>
+              {skillLevel.length > 1 && (
+                <button
+                  className="remove-button"
+                  type="button"
+                  onClick={() => {
+                    const copiedSkillLevel = [...skillLevel];
+                    copiedSkillLevel.splice(index, 1);
+                    setSkillLevel(copiedSkillLevel);
+                  }}
+                >
+                  Remove
+                </button>
+              )}
             </div>
           );
         })}
@@ -56,6 +70,7 @@ const Skills = ({ skillLevel, setSkillLevel }) => {
             copiedSkillLevel.push({
               skill: '',
               level: '',
+              id: nanoid(),
             });
             setSkillLevel(copiedSkillLevel);
           }}

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Generator/style.scss';
+import { nanoid } from 'nanoid';
 
 const WorkExperience = ({ workExperience, setWorkExperience }) => {
   return (
@@ -7,7 +8,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
       <h2>Work Experience</h2>
       {workExperience.map((x, index) => {
         return (
-          <div className="work-experience-grid">
+          <div key={x.id} className="work-experience-grid">
             <div className="position-empl-city-grid">
               <div className="label-input-container">
                 <label className="label-block" htmlFor="position">
@@ -119,6 +120,19 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
                 ></textarea>
               </div>
             </div>
+            {workExperience.length > 1 && (
+              <button
+                className="remove-button"
+                type="button"
+                onClick={() => {
+                  const copiedWorkExperience = [...workExperience];
+                  copiedWorkExperience.splice(index, 1);
+                  setWorkExperience(copiedWorkExperience);
+                }}
+              >
+                Remove
+              </button>
+            )}
           </div>
         );
       })}
@@ -136,6 +150,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
               startDate: '',
               endDate: '',
               jobDescription: '',
+              id: nanoid(),
             });
             setWorkExperience(copiedWorkExperience);
           }}

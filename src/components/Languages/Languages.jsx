@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import React from 'react';
 import '../Generator/style.scss';
 
@@ -8,7 +9,7 @@ const Languages = ({ languageLevel, setLanguageLevel }) => {
       <div className="languages-grid">
         {languageLevel.map((x, index) => {
           return (
-            <div className="label-input-container">
+            <div key={x.id} className="label-input-container">
               <label htmlFor="language"></label>
               <input
                 className="input text-input"
@@ -40,6 +41,19 @@ const Languages = ({ languageLevel, setLanguageLevel }) => {
                 <option value="advanced">B1/B2</option>
                 <option value="expert">C1/C2</option>
               </select>
+              {languageLevel.length > 1 && (
+                <button
+                  className="remove-button"
+                  type="button"
+                  onClick={() => {
+                    const copiedLanguageLevel = [...languageLevel];
+                    copiedLanguageLevel.splice(index, 1);
+                    setLanguageLevel(copiedLanguageLevel);
+                  }}
+                >
+                  Remove
+                </button>
+              )}
             </div>
           );
         })}
@@ -53,6 +67,7 @@ const Languages = ({ languageLevel, setLanguageLevel }) => {
             copiedLanguageLevel.push({
               language: '',
               level: '',
+              id: nanoid(),
             });
             setLanguageLevel(copiedLanguageLevel);
           }}

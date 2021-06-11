@@ -9,6 +9,7 @@ import WorkExperience from '../WorkExperience/WorkExperience';
 import Hobbies from '../Hobbies/Hobbies';
 import Courses from '../Courses/Courses';
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
+import { nanoid } from 'nanoid';
 
 const Generator = () => {
   const [previewVisible, setPreviewVisible] = useState(false);
@@ -28,6 +29,7 @@ const Generator = () => {
       startDate: '01.01.1000',
       endDate: '01.01.2000',
       jobDescription: '',
+      id: nanoid(),
     },
   ]);
 
@@ -41,6 +43,7 @@ const Generator = () => {
       startDate: '',
       endDate: '',
       educationDescription: '',
+      id: nanoid(),
     },
   ]);
 
@@ -48,26 +51,32 @@ const Generator = () => {
     {
       skill: '',
       level: '',
+      id: nanoid(),
     },
     {
       skill: '',
       level: '',
+      id: nanoid(),
     },
     {
       skill: '',
       level: '',
+      id: nanoid(),
     },
     {
       skill: '',
       level: '',
+      id: nanoid(),
     },
     {
       skill: '',
       level: '',
+      id: nanoid(),
     },
     {
       skill: '',
       level: '',
+      id: nanoid(),
     },
   ]);
 
@@ -75,10 +84,12 @@ const Generator = () => {
     {
       language: '',
       level: '',
+      id: nanoid(),
     },
     {
       language: '',
       level: '',
+      id: nanoid(),
     },
   ]);
 
@@ -89,6 +100,7 @@ const Generator = () => {
       courseName: '',
       organization: '',
       courseDescription: '',
+      id: nanoid(),
     },
   ]);
 

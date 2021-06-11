@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Generator/style.scss';
+import { nanoid } from 'nanoid';
 
 const Education = ({ education, setEducation }) => {
   return (
@@ -7,7 +8,7 @@ const Education = ({ education, setEducation }) => {
       <h2>Education</h2>
       {education.map((x, index) => {
         return (
-          <div className="education-grid">
+          <div key={x.id} className="education-grid">
             <div className="uni-grid">
               <div className="label-input-container">
                 <label className="label-block" htmlFor="universtiy">
@@ -154,6 +155,19 @@ const Education = ({ education, setEducation }) => {
                 ></textarea>
               </div>
             </div>
+            {education.length > 1 && (
+              <button
+                className="remove-button"
+                type="button"
+                onClick={() => {
+                  const copiedEducation = [...education];
+                  copiedEducation.splice(index, 1);
+                  setEducation(copiedEducation);
+                }}
+              >
+                Remove
+              </button>
+            )}
           </div>
         );
       })}
@@ -173,6 +187,7 @@ const Education = ({ education, setEducation }) => {
               startDate: '',
               endDate: '',
               educationDescription: '',
+              id: nanoid(),
             });
 
             setEducation(copiedEducation);

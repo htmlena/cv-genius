@@ -65,9 +65,11 @@
   background-color: #f2f5fa;
   width: 100%;
   padding: 0.7rem 0.5rem;
+  resize: none;
 }
 
-.add-button {
+.add-button,
+.remove-button {
   padding: 0.5rem;
   text-align: start;
   border: 1px solid white;
@@ -78,7 +80,9 @@
 }
 
 .add-button:hover,
-.add-button:focus {
+.add-button:focus,
+.remove-button:hover,
+.remove-button:focus {
   cursor: pointer;
   background-color: #f2f5fa;
 }
