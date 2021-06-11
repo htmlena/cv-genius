@@ -185,17 +185,19 @@ const styles = StyleSheet.create({
   },
 
   skillsLevels: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: 'block',
+    flexDirection: 'row',
     justifyContent: 'space-between',
-    justifyContent: 'flex-start',
-    width: '200pt',
+    flexWrap: 'wrap',
+    width: '100%',
   },
 
   sectionSkills: {
     display: 'flex',
+    flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: '17pt',
+    width: '40%',
   },
 
   skill: {
@@ -218,17 +220,19 @@ const styles = StyleSheet.create({
   },
 
   languagesLevels: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: 'block',
+    flexDirection: 'row',
     justifyContent: 'space-between',
-    justifyContent: 'flex-start',
-    width: '200pt',
+    flexWrap: 'wrap',
+    width: '100%',
   },
 
   sectionLanguages: {
     display: 'flex',
+    flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: '20pt',
+    width: '40%',
   },
 
   language: {
@@ -253,11 +257,13 @@ const styles = StyleSheet.create({
   },
 
   coursesLevels: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: 'block',
+    flexDirection: 'row',
     justifyContent: 'space-between',
-    justifyContent: 'flex-start',
-    width: '200pt',
+    flexWrap: 'wrap',
+    width: '70%',
+    // justifyContent: 'flex-start',
+    // width: '200pt',
   },
 
   course: {
