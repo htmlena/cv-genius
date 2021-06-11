@@ -14,7 +14,7 @@ import font from './Lato-Regular.ttf';
 
 const styles = StyleSheet.create({
   page: {
-    padding: 50,
+    padding: 30,
     display: 'flex',
     flexDirection: 'column',
     fontSize: 12,
@@ -30,10 +30,11 @@ const styles = StyleSheet.create({
 
   personalInfo: {
     fontFamily: 'Lato',
-    backgroundColor: '#3c64b1',
-    color: 'white',
+    backgroundColor: '#f2f5fa',
+    color: '#3c64b1',
     marginBottom: '17pt',
-    marginTop: '17pt',
+    marginTop: '0pt',
+    // marginTop: '17pt',
     padding: '20pt',
   },
 
