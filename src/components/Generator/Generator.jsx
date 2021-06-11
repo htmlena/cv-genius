@@ -175,6 +175,27 @@ const Generator = () => {
             >
               Back to Form
             </button>
+            <PDFDownloadLink
+              document={
+                <CvView
+                  userName={userName}
+                  userSurname={userSurname}
+                  userEmail={userEmail}
+                  userMobile={userMobile}
+                  speech={speech}
+                  workExperience={workExperience}
+                  education={education}
+                  skillLevel={skillLevel}
+                  languageLevel={languageLevel}
+                  hobbies={hobbies}
+                  course={course}
+                  linkedinUrl={linkedinUrl}
+                  otherUrl={otherUrl}
+                />
+              }
+            >
+              <button className="download-button">Download CV</button>
+            </PDFDownloadLink>
           </div>
           <div className="preview">
             <PDFViewer className="pdf-viewer">
@@ -195,28 +216,6 @@ const Generator = () => {
               />
             </PDFViewer>
           </div>
-
-          <PDFDownloadLink
-            document={
-              <CvView
-                userName={userName}
-                userSurname={userSurname}
-                userEmail={userEmail}
-                userMobile={userMobile}
-                speech={speech}
-                workExperience={workExperience}
-                education={education}
-                skillLevel={skillLevel}
-                languageLevel={languageLevel}
-                hobbies={hobbies}
-                course={course}
-                linkedinUrl={linkedinUrl}
-                otherUrl={otherUrl}
-              />
-            }
-          >
-            <button className="download-button">Download CV</button>
-          </PDFDownloadLink>
         </>
       )}
     </>

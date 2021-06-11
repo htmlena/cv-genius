@@ -10,13 +10,10 @@ import {
 } from '@react-pdf/renderer';
 import '../PersonalInfo/PersonalInfo';
 
-// import font from './font.ttf';
-
-// Font.register({ family: 'sans-serif', src: font, format: 'truetype' });
+import font from './Lato-Regular.ttf';
 
 const styles = StyleSheet.create({
   page: {
-    // fontFamily: 'sans-serif',
     paddingLeft: '50pt',
     paddingRight: '50pt',
     display: 'flex',
@@ -33,6 +30,7 @@ const styles = StyleSheet.create({
   },
 
   personalInfo: {
+    fontFamily: 'Lato',
     backgroundColor: '#3c64b1',
     color: 'white',
     marginBottom: '17pt',
@@ -86,6 +84,7 @@ const styles = StyleSheet.create({
   // Job experience
 
   experience: {
+    fontFamily: 'Lato',
     display: 'block',
     fontSize: 20,
     fontWeight: 400,
@@ -313,6 +312,8 @@ const styles = StyleSheet.create({
     lineHeight: '1.3pt',
   },
 });
+
+Font.register({ family: 'Lato', src: font, format: 'truetype' });
 
 export const CvView = ({
   userName,
