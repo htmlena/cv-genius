@@ -1,11 +1,15 @@
 import { nanoid } from 'nanoid';
 import React from 'react';
 import '../Generator/style.scss';
+import InfoTooltip from '../InfoTooltip/InfoTooltip';
 
 const Languages = ({ languageLevel, setLanguageLevel }) => {
   return (
     <div className="languages-container">
-      <h2>Languages</h2>
+      <div className="section-header-container">
+        <h2>Languages</h2>
+        <InfoTooltip content="Languages" />
+      </div>
       <div className="languages-grid">
         {languageLevel.map((x, index) => {
           return (

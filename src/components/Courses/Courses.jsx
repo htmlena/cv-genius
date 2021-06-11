@@ -1,11 +1,15 @@
 import { nanoid } from 'nanoid';
 import React from 'react';
 import '../Generator/style.scss';
+import InfoTooltip from '../InfoTooltip/InfoTooltip';
 
 const Courses = ({ course, setCourse }) => {
   return (
     <div className="courses-container">
-      <h2>Courses</h2>
+      <div className="section-header-container">
+        <h2>Courses</h2>
+        <InfoTooltip content="Courses" />
+      </div>
       <div className="courses-grid">
         {course.map((x, index) => {
           return (

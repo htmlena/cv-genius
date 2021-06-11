@@ -1,11 +1,15 @@
 import React from 'react';
 import '../Generator/style.scss';
 import { nanoid } from 'nanoid';
+import InfoTooltip from '../InfoTooltip/InfoTooltip';
 
 const WorkExperience = ({ workExperience, setWorkExperience }) => {
   return (
     <div className="work-experience-container">
-      <h2>Work Experience</h2>
+      <div className="section-header-container">
+        <h2>Work Experience</h2>
+        <InfoTooltip content="Work Experience" />
+      </div>
       {workExperience.map((x, index) => {
         return (
           <div key={x.id} className="work-experience-grid">

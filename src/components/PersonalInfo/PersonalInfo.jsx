@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Generator/style.scss';
+import InfoTooltip from '../InfoTooltip/InfoTooltip';
 
 const PersonalInfo = ({
   userName,
@@ -19,7 +20,10 @@ const PersonalInfo = ({
 }) => {
   return (
     <div className="personal-info-container">
-      <h2>Personal information</h2>
+      <div className="section-header-container">
+        <h2>Personal information</h2>
+        <InfoTooltip content="Personal" />
+      </div>
       <div className="personal-info-grid">
         <div className="name-surname-grid">
           <div className="label-input-container">

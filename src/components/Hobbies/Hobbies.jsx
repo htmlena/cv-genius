@@ -1,10 +1,14 @@
 import React from 'react';
 import '../Generator/style.scss';
+import InfoTooltip from '../InfoTooltip/InfoTooltip';
 
 const Hobbies = ({ hobbies, setHobbies }) => {
   return (
     <div className="hobbies-container">
-      <h2>Hobbies</h2>
+      <div className="section-header-container">
+        <h2>Hobbies</h2>
+        <InfoTooltip content="Hobbies" />
+      </div>
       <div className="hobbies-textarea-grid">
         <div className="label-input-container">
           <label className="label-block" htmlFor="hobby"></label>

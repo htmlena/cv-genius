@@ -151,6 +151,16 @@
   color: white;
 }
 
+.section-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header-container > * + * {
+  margin-left: 1rem;
+}
+
 @media (min-width: 688px) {
   .main-form-container {
     align-items: flex-start;
@@ -266,6 +276,10 @@
   .pdf-viewer {
     width: 400px;
     height: 600px;
+  }
+
+  .section-header-container {
+    justify-content: initial;
   }
 }
 

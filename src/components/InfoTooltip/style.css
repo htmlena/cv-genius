@@ -1,0 +1,63 @@
+.info-tooltip-body {
+  background: #333;
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  display: block;
+  max-width: 20rem;
+  margin: 0;
+}
+
+.info-tooltip-arrow,
+.info-tooltip-arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+.info-tooltip-arrow {
+  visibility: hidden;
+}
+
+.info-tooltip-arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.info-tooltip-body[data-popper-placement^='top'] > .info-tooltip-arrow {
+  bottom: -4px;
+}
+
+.info-tooltip-body[data-popper-placement^='bottom'] > .info-tooltip-arrow {
+  top: -4px;
+}
+
+.info-tooltip-body[data-popper-placement^='left'] > .info-tooltip-arrow {
+  right: -4px;
+}
+
+.info-tooltip-body[data-popper-placement^='right'] > .info-tooltip-arrow {
+  left: -4px;
+}
+
+.info-tooltip-button {
+  height: 1.5rem;
+  padding: unset;
+  border: unset;
+  background: unset;
+}
+
+.info-tooltip-icon {
+  fill: #ed7d2c;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.info-tooltip-button:hover .info-tooltip-icon,
+.info-tooltip-button:focus .info-tooltip-icon {
+  opacity: 1;
+}
