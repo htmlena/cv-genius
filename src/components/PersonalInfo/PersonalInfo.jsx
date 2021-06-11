@@ -22,7 +22,13 @@ const PersonalInfo = ({
     <div className="personal-info-container">
       <div className="section-header-container">
         <h2>Personal information</h2>
-        <InfoTooltip content="Personal" />
+        <InfoTooltip
+          content="This is the first section everyone sees when looking at your CV. We highly recommend to include your LinkedIn URL with a completed profile and one more URL to present your project, website or github repositories. This way you can provide more information about your work and your background. 
+
+The Resume summary statement should give a quick introduction into who you are, what you have accomplished and where you are heading. It is a clear, brief message or “commercial” about you. It communicates who you are, what you’re looking for and how you can benefit an organization. Keep the message under 5 sentences. We recommend sticking to the point and taking into account  the position and company you are applying to. 
+
+Example of a resume statement: Senior Account Executive with experience helping companies clean and enrich their data with sales intelligence tools in Salesforce and Eloqua. Managing big data effectively, I have helped over 200 clients reduce IT infrastructure overhead by up to 40%. My wish is  to share as well as continue enriching my know-how within the Big Data team in Apple."
+        />
       </div>
       <div className="personal-info-grid">
         <div className="name-surname-grid">

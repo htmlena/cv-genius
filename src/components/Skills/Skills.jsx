@@ -8,7 +8,7 @@ const Skills = ({ skillLevel, setSkillLevel }) => {
     <div className="skills-container">
       <div className="section-header-container">
         <h2>Skills</h2>
-        <InfoTooltip content="Skill Level" />
+        <InfoTooltip content="Skills are your natural talents and the expertise you develop to perform a task or a job. The skills are usually divided into the Soft skills- a set of requirements necessary for the quality performance of work, which do not depend on specific expertise, but on the complex abilities of man. And the Hard skills: a set of professional requirements (theoretical knowledge, practical skills) needed to perform the profession.Think about your acquired skills and check whether they match the concrete job offer. If they do, use them in the exact key words as in the job offer. Be honest with your level, but do not underestimate yourself. We recommend using four hard and four soft skills, prioritized by the ones referred to in the certain job offer. If you are a student or graduate looking for your first job, you can only list your soft skills." />
       </div>
       <div className="skills-grid">
         {skillLevel.map((x, index) => {

@@ -8,7 +8,7 @@ const Education = ({ education, setEducation }) => {
     <div className="education-container">
       <div className="section-header-container">
         <h2>Education</h2>
-        <InfoTooltip content="Education" />
+        <InfoTooltip content="Firstly, you do not have to include all of your schools. For example- in case you have a higher education, you do not have to mention your elementary or high school. Start with your highest achieved education and include one or two institutions you have attended before. If you studied at a university, do not forget to add your degree. In case you completed a requalification course or any other long-period course, and you have an ambition to work in this field, we recommend that you include the course into the education section. Description of the studied courses is optional, but it provides you with another space for using the key words which match the concrete job offer." />
       </div>
       {education.map((x, index) => {
         return (

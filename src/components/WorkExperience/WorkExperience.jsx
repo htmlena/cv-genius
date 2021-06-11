@@ -8,7 +8,7 @@ const WorkExperience = ({ workExperience, setWorkExperience }) => {
     <div className="work-experience-container">
       <div className="section-header-container">
         <h2>Work Experience</h2>
-        <InfoTooltip content="Work Experience" />
+        <InfoTooltip content="If you used the key words section, start with reading the key words and adjust this section accordingly. Try to include them into your job description. If you are an experienced senior, we recommend you to include your last 3 most relevant job experiences to a position you are applying for. If you are a student or just graduated, include also your internships or any activities during school (i.e. AIESEC). Include a description of your responsibilities and outputs you have achieved in the position." />
       </div>
       {workExperience.map((x, index) => {
         return (

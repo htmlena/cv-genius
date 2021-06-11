@@ -8,7 +8,7 @@ const Languages = ({ languageLevel, setLanguageLevel }) => {
     <div className="languages-container">
       <div className="section-header-container">
         <h2>Languages</h2>
-        <InfoTooltip content="Languages" />
+        <InfoTooltip content="List all your language skills- including your native tongue. If you are not sure about your level, you can test your approximate level by completing a verified test online which will allow you to estimate your abilities. Moreover, in case a language test would be a part of the recruitment process, your results will match your CV data." />
       </div>
       <div className="languages-grid">
         {languageLevel.map((x, index) => {
