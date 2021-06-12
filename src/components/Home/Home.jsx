@@ -12,8 +12,8 @@ const Home = () => {
     <>
       <div className="container-homepage">
         <div className="container-home">
-          <h1 class="home-header">Create a CV that will land you a job</h1>
-          <p class="home-header-text">
+          <h1 className="home-header">Create a CV that will land you a job</h1>
+          <p className="home-header-text">
             Looking for a job can be challenging, but we are here to empower you
             to make the best first impression with your CV.
           </p>
