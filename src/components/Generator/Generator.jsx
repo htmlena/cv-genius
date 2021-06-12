@@ -10,6 +10,7 @@ import Hobbies from '../Hobbies/Hobbies';
 import Courses from '../Courses/Courses';
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 import { nanoid } from 'nanoid';
+import Keywords from '../Keywords/Keywords';
 
 const Generator = () => {
   const [previewVisible, setPreviewVisible] = useState(false);
@@ -106,7 +107,9 @@ const Generator = () => {
 
   return (
     <>
-      {' '}
+      <form className="keywords-form-container">
+        <Keywords />
+      </form>{' '}
       {!previewVisible && (
         <>
           <form className="main-form-container">
