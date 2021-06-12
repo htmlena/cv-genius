@@ -380,50 +380,7 @@ export const CvView = ({
               </View>
             );
           })}
-          {/* Job experience 2 */}
-          <View style={styles.sectionJob}>
-            <View style={styles.container}>
-              <Text style={styles.position}>Senior Executive</Text>
-              <View style={styles.containerDates}>
-                <Text style={styles.date}>1.8.2020 - 30.5.2021</Text>
-              </View>
-            </View>
-            <View style={styles.container}>
-              <Text style={styles.company}>
-                Phillip and Morris company, s.r.o.
-              </Text>
-              <Text style={styles.cityJob}>Vancouver</Text>
-            </View>
-            <Text style={styles.jobDescription}>
-              Among my responsibilities was to hire new employees into our
-              company by screening their CVs, schedule interviews and hgvbgjh
-              jknkj jnjwe fewf zjuh sdssdc rgrtgb edfrgv getg thtzhj ewferg -
-              fgevfbvefgbr - dfbdbrbgbdv dgvefinnvierngvjernjvnwkr ergvkefvfrbv
-              Among my responsibilities was to hire new employees into our
-              company by screening their CVs, schedule interviews and hgvbgjh
-              jknkj jnjwe fewf zjuh sdssdc rgrtgb edfrgv getg thtzhj ewferg -
-              fgevfbvefgbr - dfbdbrbgbdv dgvefinnvierngvjernjvnwkr ergvkefvfrbv
-            </Text>
-          </View>
           {/* Job experience 3 */}
-          <View style={styles.sectionJob}>
-            <View style={styles.container}>
-              <Text style={styles.position}>PR manager</Text>
-              <View style={styles.containerDates}>
-                <Text style={styles.date}>1.8.2020 - 30.5.2021</Text>
-              </View>
-            </View>
-            <View style={styles.container}>
-              <Text style={styles.company}>
-                Phillip and Morris company, s.r.o.
-              </Text>
-              <Text style={styles.cityJob}>Považská Bystrica, Slovensko</Text>
-            </View>
-            <Text style={styles.jobDescription}>
-              Among my responsibilities was to hire new employees into our
-              company.
-            </Text>
-          </View>
         </View>
         {/* Education 1 */}
         <View style={styles.section} wrap={false}>
