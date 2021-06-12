@@ -1,0 +1,48 @@
+.container-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+.about-title {
+  text-align: center;
+  line-height: 2rem;
+}
+
+.about-citations {
+  font-style: italic;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.about-text {
+  line-height: 2rem;
+}
+
+.about-names {
+  font-style: italic;
+  padding-top: 5rem;
+}
+
+@media (min-width: 688px) {
+  .container-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 5rem;
+  }
+}
