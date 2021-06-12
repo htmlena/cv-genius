@@ -324,6 +324,157 @@ const formatDate = (date) => {
   return `${splittedDate[1]}.${splittedDate[0]}`;
 };
 
+const WorkExperience = ({ workExperience }) => {
+  const validExperience = workExperience.filter(({ position }) => position);
+  if (!validExperience.length) return null;
+
+  return (
+    <View style={styles.section} wrap={false}>
+      <Text style={styles.experience}>Work experience</Text>
+      {validExperience.map((x) => {
+        return (
+          <View key={x.id} style={styles.sectionJob}>
+            <View style={styles.container}>
+              <Text style={styles.position}>{x.position}</Text>
+              <View style={styles.containerDates}>
+                <Text style={styles.date}>
+                  {formatDate(x.startDate)} - {formatDate(x.endDate)}
+                </Text>
+              </View>
+            </View>
+            <View style={styles.container}>
+              <Text style={styles.company}>{x.company}</Text>
+              <Text style={styles.cityJob}>{x.city}</Text>
+            </View>
+            <Text style={styles.jobDescription}>{x.jobDescription}</Text>
+          </View>
+        );
+      })}
+    </View>
+  );
+};
+
+const Education = ({ education }) => {
+  const validEducations = education.filter(({ university }) => university);
+  if (!validEducations.length) return null;
+
+  return (
+    <View style={styles.section} wrap={false}>
+      <Text style={styles.education}>Education</Text>
+      {validEducations.map((x) => {
+        return (
+          <View key={x.id} style={styles.sectionEducation}>
+            <View style={styles.container}>
+              <Text style={styles.university}>{x.university}</Text>
+              <View style={styles.containerDates}>
+                <Text style={styles.date}>
+                  {formatDate(x.startDate)} - {formatDate(x.endDate)}
+                </Text>
+              </View>
+            </View>
+            <View style={styles.container}>
+              <Text style={styles.faculty}>{x.faculty}</Text>
+              <Text style={styles.cityEducation}>{x.cityEducation}</Text>
+            </View>
+            {x.fieldOfStudy || x.degree ? (
+              <Text style={styles.fieldOfStudyDegree}>
+                {x.fieldOfStudy}, {x.degree}
+              </Text>
+            ) : null}
+            <Text style={styles.educationDescription}>
+              {x.educationDescription}
+            </Text>
+          </View>
+        );
+      })}
+    </View>
+  );
+};
+
+const Skills = ({ skillLevel }) => {
+  const validSkills = skillLevel.filter(({ skill }) => skill);
+  if (!validSkills.length) return null;
+
+  return (
+    <View style={styles.section} wrap={false}>
+      <Text style={styles.skills}>Skills</Text>
+      <View style={styles.skillsLevels}>
+        {validSkills.map((x) => {
+          return (
+            <View key={x.id} style={styles.sectionSkills}>
+              <Text style={styles.skill}>{x.skill}</Text>
+              <Text style={styles.level}>{x.level}</Text>
+            </View>
+          );
+        })}
+      </View>
+    </View>
+  );
+};
+
+const Lanugages = ({ languageLevel }) => {
+  const validLanguages = languageLevel.filter(({ language }) => language);
+  if (!validLanguages.length) return null;
+
+  return (
+    <View style={styles.section} wrap={false}>
+      <Text style={styles.languages}>Languages</Text>
+      <View style={styles.languagesLevels}>
+        {validLanguages.map((x) => {
+          return (
+            <View key={x.id} style={styles.sectionLanguages}>
+              <Text style={styles.language}>{x.language}</Text>
+              <Text style={styles.level}>{x.level}</Text>
+            </View>
+          );
+        })}
+      </View>
+    </View>
+  );
+};
+
+const Courses = ({ course }) => {
+  const validCourses = course.filter(
+    ({ courseName, organization, courseDescription }) =>
+      courseName || organization || courseDescription,
+  );
+  if (!validCourses.length) return null;
+
+  return (
+    <View style={styles.section} wrap={false}>
+      <Text style={styles.courses}>Courses</Text>
+      <View style={styles.coursesLevels}>
+        {validCourses.map((x) => {
+          return (
+            <View key={x.id} style={styles.sectionCourses}>
+              <Text style={styles.course}>{x.courseName}</Text>
+              <Text style={styles.organization}>{x.organization}</Text>
+              <Text style={styles.courseDescription}>
+                {x.courseDescription}
+              </Text>
+            </View>
+          );
+        })}
+      </View>
+    </View>
+  );
+};
+
+const Hobbies = ({ hobbies }) => {
+  if (!hobbies) return null;
+
+  return (
+    <View style={styles.section} wrap={false}>
+      <Text style={styles.hobbies}>Hobbies</Text>
+      <View style={styles.hobbiesTextArea}>
+        <View style={styles.sectionHobbies}>
+          <Text style={styles.hobby}>{hobbies}</Text>
+        </View>
+      </View>
+    </View>
+  );
+};
+
 export const CvView = ({
   userName,
   userSurname,
@@ -358,112 +509,12 @@ export const CvView = ({
             <Text style={styles.elevatorSpeech}>{speech}</Text>
           </View>
         </View>
-        {/* Job experience 1 */}
-        <View style={styles.section} wrap={false}>
-          <Text style={styles.experience}>Work experience</Text>
-          {workExperience.map((x) => {
-            return (
-              <View style={styles.sectionJob}>
-                <View style={styles.container}>
-                  <Text style={styles.position}>{x.position}</Text>
-                  <View style={styles.containerDates}>
-                    <Text style={styles.date}>
-                      {formatDate(x.startDate)} - {formatDate(x.endDate)}
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.container}>
-                  <Text style={styles.company}>{x.company}</Text>
-                  <Text style={styles.cityJob}>{x.city}</Text>
-                </View>
-                <Text style={styles.jobDescription}>{x.jobDescription}</Text>
-              </View>
-            );
-          })}
-          {/* Job experience 3 */}
-        </View>
-        {/* Education 1 */}
-        <View style={styles.section} wrap={false}>
-          <Text style={styles.education}>Education</Text>
-          {education.map((x) => {
-            return (
-              <View style={styles.sectionEducation}>
-                <View style={styles.container}>
-                  <Text style={styles.university}>{x.university}</Text>
-                  <View style={styles.containerDates}>
-                    <Text style={styles.date}>
-                      {formatDate(x.startDate)} - {formatDate(x.endDate)}
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.container}>
-                  <Text style={styles.faculty}>{x.faculty}</Text>
-                  <Text style={styles.cityEducation}>{x.cityEducation}</Text>
-                </View>
-                <Text style={styles.fieldOfStudyDegree}>
-                  {x.fieldOfStudy} ,{x.degree}
-                </Text>
-                <Text style={styles.educationDescription}>
-                  {x.educationDescription}
-                </Text>
-              </View>
-            );
-          })}
-        </View>
-        {/* Skills */}
-        <View style={styles.section} wrap={false}>
-          <Text style={styles.skills}>Skills</Text>
-          <View style={styles.skillsLevels}>
-            {skillLevel.map((x) => {
-              return (
-                <View style={styles.sectionSkills}>
-                  <Text style={styles.skill}>{x.skill}</Text>
-                  <Text style={styles.level}>{x.level}</Text>
-                </View>
-              );
-            })}
-          </View>
-        </View>
-        {/* Languages */}
-        <View style={styles.section} wrap={false}>
-          <Text style={styles.languages}>Languages</Text>
-          <View style={styles.languagesLevels}>
-            {languageLevel.map((x) => {
-              return (
-                <View style={styles.sectionLanguages}>
-                  <Text style={styles.language}>{x.language}</Text>
-                  <Text style={styles.level}>{x.level}</Text>
-                </View>
-              );
-            })}
-          </View>
-        </View>
-        {/* Courses */}
-        <View style={styles.section} wrap={false}>
-          <Text style={styles.courses}>Courses</Text>
-          <View style={styles.coursesLevels}>
-            {course.map((x) => {
-              return (
-                <View style={styles.sectionCourses}>
-                  <Text style={styles.course}>{x.courseName}</Text>
-                  <Text style={styles.organization}>{x.organization}</Text>
-                  <Text style={styles.courseDescription}>
-                    {x.courseDescription}
-                  </Text>
-                </View>
-              );
-            })}
-          </View>
-        </View>
-        {/* Hobbies */}
-        <View style={styles.section} wrap={false}>
-          <Text style={styles.hobbies}>Hobbies</Text>
-          <View style={styles.hobbiesTextArea}>
-            <View style={styles.sectionHobbies}>
-              <Text style={styles.hobby}>{hobbies}</Text>
-            </View>
-          </View>
-        </View>
+        <WorkExperience workExperience={workExperience} />
+        <Education education={education} />
+        <Skills skillLevel={skillLevel} />
+        <Lanugages languageLevel={languageLevel} />
+        <Courses course={course} />
+        <Hobbies hobbies={hobbies} />
       </Page>
     </Document>
   );
