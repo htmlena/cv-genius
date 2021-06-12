@@ -8,7 +8,20 @@ const Courses = ({ course, setCourse }) => {
     <div className="courses-container">
       <div className="section-header-container">
         <h2>Courses</h2>
-        <InfoTooltip content="Try to list courses that could be a fit for the certain job offer. For example- if you did a yoga lector requalification course, but you are applying for a Sales position, it is better to give this space to sales-relevant courses such as Negotiation course and mention the Yoga course below, in the hobbies section." />
+        <InfoTooltip
+          content={
+            <>
+              <p>
+                Try to list courses that could be a fit for the certain job
+                offer. For example- if you did a yoga lector requalification
+                course, but you are applying for a Sales position, it is better
+                to give this space to sales-relevant courses such as Negotiation
+                course and mention the Yoga course below, in the hobbies
+                section.
+              </p>
+            </>
+          }
+        />
       </div>
       <div className="courses-grid-wrapper">
         {course.map((x, index) => {

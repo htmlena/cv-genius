@@ -10,6 +10,12 @@
   width: 100%;
 }
 
+.label-tooltip-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
 .work-experience-container {
   width: 100%;
 }
@@ -44,6 +50,7 @@
   color: gray;
   margin-bottom: 0.5rem;
   font-weight: 700;
+  margin-right: 1rem;
 }
 
 .label-input-container {
@@ -286,7 +293,8 @@
     height: 600px;
   }
 
-  .section-header-container {
+  .section-header-container,
+  .label-tooltip-container {
     justify-content: initial;
   }
 }
