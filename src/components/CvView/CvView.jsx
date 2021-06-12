@@ -14,6 +14,8 @@ Font.register({
   src: font,
 });
 
+//-----------------------------------------PDF styles-------------------------------------
+
 const styles = StyleSheet.create({
   page: {
     padding: 30,
@@ -36,7 +38,6 @@ const styles = StyleSheet.create({
     color: '#3c64b1',
     marginBottom: '17pt',
     marginTop: '0pt',
-    // marginTop: '17pt',
     padding: '20pt',
   },
 
@@ -78,12 +79,6 @@ const styles = StyleSheet.create({
     marginTop: '20pt',
     lineHeight: '1.3pt',
   },
-
-  // section: {
-  //   marginBottom: '20pt',
-  // },
-
-  // Job experience
 
   experience: {
     display: 'block',
@@ -263,8 +258,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
-    // justifyContent: 'flex-start',
-    // width: '200pt',
   },
 
   course: {
@@ -284,12 +277,6 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     lineHeight: '1.3pt',
   },
-
-  // courseDescription: {
-  //   display: 'block',
-  //   textAlign: 'center',
-  //   marginBottom: '20pt',
-  // },
 
   // Hobbies
 
@@ -323,6 +310,8 @@ const formatDate = (date) => {
   const splittedDate = date.split('-');
   return `${splittedDate[1]}.${splittedDate[0]}`;
 };
+
+//--------------------------------------Components-------------------------------------
 
 const WorkExperience = ({ workExperience }) => {
   const validExperience = workExperience.filter(({ position }) => position);
@@ -474,6 +463,8 @@ const Hobbies = ({ hobbies }) => {
     </View>
   );
 };
+
+//-----------------------------------------PDF structure-------------------------------------
 
 export const CvView = ({
   userName,

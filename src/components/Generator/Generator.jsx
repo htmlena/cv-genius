@@ -148,6 +148,7 @@ const Generator = () => {
 
             <div className="preview-button-container">
               <button
+                type="button"
                 className="preview-button"
                 onClick={() => {
                   if (previewVisible) {
