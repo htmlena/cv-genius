@@ -1,6 +1,18 @@
 import React from 'react';
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import '../PersonalInfo/PersonalInfo';
+import {
+  Page,
+  Text,
+  View,
+  Document,
+  StyleSheet,
+  Font,
+} from '@react-pdf/renderer';
+import font from './Lato-Regular.ttf';
+
+Font.register({
+  family: 'Lato',
+  src: font,
+});
 
 const styles = StyleSheet.create({
   page: {
@@ -74,10 +86,8 @@ const styles = StyleSheet.create({
   // Job experience
 
   experience: {
-    fontFamily: 'Lato',
     display: 'block',
     fontSize: 20,
-    fontWeight: 400,
     color: '#3c64b1',
     marginBottom: '17pt',
     borderBottom: '1pt solid #3c64b1',
@@ -236,6 +246,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     marginBottom: '20pt',
     justifyContent: 'space-between',
+    width: '45%',
   },
 
   courses: {
@@ -248,11 +259,10 @@ const styles = StyleSheet.create({
   },
 
   coursesLevels: {
-    display: 'block',
+    display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
-    width: '70%',
     // justifyContent: 'flex-start',
     // width: '200pt',
   },

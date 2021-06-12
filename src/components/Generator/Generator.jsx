@@ -8,11 +8,8 @@ import Languages from '../Languages/Languages';
 import WorkExperience from '../WorkExperience/WorkExperience';
 import Hobbies from '../Hobbies/Hobbies';
 import Courses from '../Courses/Courses';
-import { PDFDownloadLink, PDFViewer, Font } from '@react-pdf/renderer';
+import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 import { nanoid } from 'nanoid';
-import font from '../CvView/Lato-Regular.ttf';
-
-Font.register({ family: 'Lato', src: font, format: 'truetype' });
 
 const Generator = () => {
   const [previewVisible, setPreviewVisible] = useState(false);

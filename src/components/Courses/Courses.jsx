@@ -10,10 +10,10 @@ const Courses = ({ course, setCourse }) => {
         <h2>Courses</h2>
         <InfoTooltip content="Try to list courses that could be a fit for the certain job offer. For example- if you did a yoga lector requalification course, but you are applying for a Sales position, it is better to give this space to sales-relevant courses such as Negotiation course and mention the Yoga course below, in the hobbies section." />
       </div>
-      <div className="courses-grid">
+      <div className="courses-grid-wrapper">
         {course.map((x, index) => {
           return (
-            <div key={x.id}>
+            <div key={x.id} className="courses-grid">
               <div className="label-input-container course-name-grid">
                 <label className="label-block" htmlFor="course-name">
                   Course Name:

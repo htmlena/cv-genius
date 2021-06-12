@@ -30,6 +30,11 @@
   width: 100%;
 }
 
+.courses-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .hobbies-container {
   width: 100%;
 }
@@ -249,7 +254,6 @@
   .courses-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     grid-template-areas:
       'coursefirst coursesecond'
       'coursethird coursethird';
