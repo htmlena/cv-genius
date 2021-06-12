@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Generator from './components/Generator/Generator';
 import About from './components/About/About';
 import Navbar from './components/Navbar/Navbar';
+import Tips from './components/Tips/Tips';
 
 const App = () => {
   return (
@@ -17,6 +18,9 @@ const App = () => {
           <Switch>
             <Route path="/cv-generator">
               <Generator />
+            </Route>
+            <Route path="/tips">
+              <Tips />
             </Route>
             <Route path="/about">
               <About />

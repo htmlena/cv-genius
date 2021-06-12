@@ -1,35 +1,39 @@
-.container-about {
+.container-tips {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  // font-size: 1rem;
 }
 
-.about-title {
-  text-align: left;
-  line-height: 2rem;
+.create-cv {
+  padding: 1rem 1.5rem;
+  border: 1px solid #3c64b1;
+  background-color: white;
+  color: #3c64b1;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
-.about-citations {
-  font-style: italic;
-  line-height: 2rem;
-  font-weight: 500;
-  padding-left: 4rem;
+.create-cv:hover,
+.create-cv:focus {
+  background-color: #3c64b1;
+  color: white;
 }
 
-.about-text {
-  line-height: 2rem;
+.create-cv-link {
+  cursor: pointer;
 }
 
-.about-names {
-  font-style: italic;
-  padding-top: 5rem;
+h2 {
+  text-align: center;
 }
 
 @media (min-width: 688px) {
-  .container-about {
+  .container-tips {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +43,7 @@
 }
 
 @media (min-width: 992px) {
-  .container-about {
+  .container-tips {
     display: flex;
     flex-direction: column;
     justify-content: center;
