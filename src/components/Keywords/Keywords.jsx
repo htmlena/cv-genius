@@ -15,8 +15,8 @@ const Keywords = () => {
                 List all keywords from the concrete job offer you will be
                 creating your CV for. Make sure you will use them in the
                 sections below, either as an exact keywords or as a description
-                of your responsibilities or outcomes. Check the Tips for more
-                guidance on how to use them.
+                of your responsibilities or outcomes. Check the CV Guide for
+                more guidance on how to use them.
               </p>{' '}
               <p>
                 {' '}

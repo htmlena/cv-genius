@@ -5,7 +5,7 @@ import Home from './components/Home/Home';
 import Generator from './components/Generator/Generator';
 import About from './components/About/About';
 import Navbar from './components/Navbar/Navbar';
-import Tips from './components/Tips/Tips';
+import CvGuide from './components/CvGuide/CvGuide';
 
 const App = () => {
   return (
@@ -19,8 +19,8 @@ const App = () => {
             <Route path="/cv-generator">
               <Generator />
             </Route>
-            <Route path="/tips">
-              <Tips />
+            <Route path="/cv-guide">
+              <CvGuide />
             </Route>
             <Route path="/about">
               <About />

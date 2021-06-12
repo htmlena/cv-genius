@@ -25,7 +25,7 @@ const Hobbies = ({ hobbies, setHobbies }) => {
               </p>
               <p>
                 If you just have started thinking about your hobbies, and do not
-                know how to write them, check the Tips section in the Menu.
+                know how to write them, check the CV Guide section in the Menu.
               </p>
             </>
           }

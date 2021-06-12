@@ -69,7 +69,7 @@
   transition: opacity 0.2s ease-in-out;
 } */
 
-.info-tooltip-button:hover .info-tooltip-icon,
-.info-tooltip-button:focus .info-tooltip-icon {
+.info-tooltip-button:hover,
+.info-tooltip-button:focus {
   opacity: 1;
 }

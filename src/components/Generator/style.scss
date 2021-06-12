@@ -100,6 +100,10 @@
   resize: none;
 }
 
+.input:focus {
+  outline-color: rgb(237, 125, 44);
+}
+
 .add-button,
 .remove-button {
   padding: 0.5rem;

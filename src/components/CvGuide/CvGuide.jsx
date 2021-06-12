@@ -3,7 +3,7 @@ import Footer from '../Footer/Footer';
 import './style.scss';
 import { Link } from 'react-router-dom';
 
-const Tips = () => {
+const CvGuide = () => {
   return (
     <>
       <div className="container-tips">
@@ -233,4 +233,4 @@ const Tips = () => {
   );
 };
 
-export default Tips;
+export default CvGuide;
