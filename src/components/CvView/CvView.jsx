@@ -313,6 +313,35 @@ const formatDate = (date) => {
 
 //--------------------------------------Components-------------------------------------
 
+const PersonalInfo = ({
+  userName,
+  userSurname,
+  userEmail,
+  userMobile,
+  linkedinUrl,
+  otherUrl,
+  speech,
+}) => {
+  return (
+    <View style={styles.personalInfo}>
+      <Text style={styles.name}>
+        {userName} {userSurname}
+      </Text>
+      <View style={styles.section}>
+        <View style={styles.container}>
+          <Text style={styles.email}>{userEmail}</Text>
+          <Text style={styles.mobile}>{userMobile}</Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.linkedin}>{linkedinUrl}</Text>
+          <Text style={styles.otherurl}>{otherUrl}</Text>
+        </View>
+        <Text style={styles.elevatorSpeech}>{speech}</Text>
+      </View>
+    </View>
+  );
+};
+
 const WorkExperience = ({ workExperience }) => {
   const validExperience = workExperience.filter(({ position }) => position);
   if (!validExperience.length) return null;
@@ -484,22 +513,15 @@ export const CvView = ({
   return (
     <Document style={styles.document}>
       <Page style={styles.page} size="A4">
-        <View style={styles.personalInfo}>
-          <Text style={styles.name}>
-            {userName} {userSurname}
-          </Text>
-          <View style={styles.section}>
-            <View style={styles.container}>
-              <Text style={styles.email}>{userEmail}</Text>
-              <Text style={styles.mobile}>{userMobile}</Text>
-            </View>
-            <View style={styles.container}>
-              <Text style={styles.linkedin}>{linkedinUrl}</Text>
-              <Text style={styles.otherurl}>{otherUrl}</Text>
-            </View>
-            <Text style={styles.elevatorSpeech}>{speech}</Text>
-          </View>
-        </View>
+        <PersonalInfo
+          userName={userName}
+          userSurname={userSurname}
+          userEmail={userEmail}
+          userMobile={userMobile}
+          linkedinUrl={linkedinUrl}
+          otherUrl={otherUrl}
+          speech={speech}
+        />
         <WorkExperience workExperience={workExperience} />
         <Education education={education} />
         <Skills skillLevel={skillLevel} />
