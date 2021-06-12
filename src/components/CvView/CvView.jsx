@@ -1,16 +1,6 @@
 import React from 'react';
-import {
-  Page,
-  Text,
-  View,
-  Document,
-  StyleSheet,
-  Font,
-  BlobProvider,
-} from '@react-pdf/renderer';
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import '../PersonalInfo/PersonalInfo';
-
-import font from './Lato-Regular.ttf';
 
 const styles = StyleSheet.create({
   page: {
@@ -319,7 +309,10 @@ const styles = StyleSheet.create({
   },
 });
 
-Font.register({ family: 'Lato', src: font, format: 'truetype' });
+const formatDate = (date) => {
+  const splittedDate = date.split('-');
+  return `${splittedDate[1]}.${splittedDate[0]}`;
+};
 
 export const CvView = ({
   userName,
@@ -356,7 +349,7 @@ export const CvView = ({
           </View>
         </View>
         {/* Job experience 1 */}
-        <View style={styles.section}>
+        <View style={styles.section} wrap={false}>
           <Text style={styles.experience}>Work experience</Text>
           {workExperience.map((x) => {
             return (
@@ -365,7 +358,7 @@ export const CvView = ({
                   <Text style={styles.position}>{x.position}</Text>
                   <View style={styles.containerDates}>
                     <Text style={styles.date}>
-                      {x.startDate} - {x.endDate}
+                      {formatDate(x.startDate)} - {formatDate(x.endDate)}
                     </Text>
                   </View>
                 </View>
@@ -423,7 +416,7 @@ export const CvView = ({
           </View>
         </View>
         {/* Education 1 */}
-        <View style={styles.section}>
+        <View style={styles.section} wrap={false}>
           <Text style={styles.education}>Education</Text>
           {education.map((x) => {
             return (
@@ -432,7 +425,7 @@ export const CvView = ({
                   <Text style={styles.university}>{x.university}</Text>
                   <View style={styles.containerDates}>
                     <Text style={styles.date}>
-                      {x.startDate} - {x.endDate}
+                      {formatDate(x.startDate)} - {formatDate(x.endDate)}
                     </Text>
                   </View>
                 </View>
@@ -451,7 +444,7 @@ export const CvView = ({
           })}
         </View>
         {/* Skills */}
-        <View style={styles.section}>
+        <View style={styles.section} wrap={false}>
           <Text style={styles.skills}>Skills</Text>
           <View style={styles.skillsLevels}>
             {skillLevel.map((x) => {
@@ -465,7 +458,7 @@ export const CvView = ({
           </View>
         </View>
         {/* Languages */}
-        <View style={styles.section}>
+        <View style={styles.section} wrap={false}>
           <Text style={styles.languages}>Languages</Text>
           <View style={styles.languagesLevels}>
             {languageLevel.map((x) => {
@@ -479,7 +472,7 @@ export const CvView = ({
           </View>
         </View>
         {/* Courses */}
-        <View style={styles.section}>
+        <View style={styles.section} wrap={false}>
           <Text style={styles.courses}>Courses</Text>
           <View style={styles.coursesLevels}>
             {course.map((x) => {
@@ -496,7 +489,7 @@ export const CvView = ({
           </View>
         </View>
         {/* Hobbies */}
-        <View style={styles.section}>
+        <View style={styles.section} wrap={false}>
           <Text style={styles.hobbies}>Hobbies</Text>
           <View style={styles.hobbiesTextArea}>
             <View style={styles.sectionHobbies}>

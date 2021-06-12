@@ -8,8 +8,11 @@ import Languages from '../Languages/Languages';
 import WorkExperience from '../WorkExperience/WorkExperience';
 import Hobbies from '../Hobbies/Hobbies';
 import Courses from '../Courses/Courses';
-import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
+import { PDFDownloadLink, PDFViewer, Font } from '@react-pdf/renderer';
 import { nanoid } from 'nanoid';
+import font from '../CvView/Lato-Regular.ttf';
+
+Font.register({ family: 'Lato', src: font, format: 'truetype' });
 
 const Generator = () => {
   const [previewVisible, setPreviewVisible] = useState(false);
@@ -26,8 +29,8 @@ const Generator = () => {
       position: '',
       company: '',
       city: '',
-      startDate: '01.01.1000',
-      endDate: '01.01.2000',
+      startDate: '1000-01-01',
+      endDate: '2000-01-01',
       jobDescription: '',
       id: nanoid(),
     },
@@ -40,8 +43,8 @@ const Generator = () => {
       fieldOfStudy: '',
       cityEducation: '',
       degree: '',
-      startDate: '',
-      endDate: '',
+      startDate: '1000-01-01',
+      endDate: '2000-01-01',
       educationDescription: '',
       id: nanoid(),
     },
