@@ -1,6 +1,6 @@
 # CV Genius
 
-CV Genius is a tool for building CVs.
+CV Genius is not just a CV builder but a complex guide that will advise you what to add or what to avoid in CV.
 
 ## Development setup
 
