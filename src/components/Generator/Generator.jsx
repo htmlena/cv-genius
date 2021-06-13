@@ -197,7 +197,9 @@ const Generator = () => {
                   />
                 }
               >
-                <button className="download-button">Download CV</button>
+                <button type="button" className="download-button">
+                  Download CV
+                </button>
               </PDFDownloadLink>
             </div>
             <div className="preview">
