@@ -1,6 +1,6 @@
 # CV Genius
 
-CV Genius is not just a CV builder but a complex guide that will advise you what to add or what to avoid in CV.
+CV Genius is a complex guide that will advise you what to add or what to avoid in CV. In the end, a user will have a professional and complete CV in pdf.
 
 ## Development setup
 
