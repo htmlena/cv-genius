@@ -1,4 +1,5 @@
-.container-tips {
+.container-cv-guide,
+.cv-guide-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,7 +46,8 @@
 }
 
 @media (min-width: 688px) {
-  .container-tips {
+  .container-cv-guide,
+  .cv-guide-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,11 +57,23 @@
 }
 
 @media (min-width: 992px) {
-  .container-tips {
+  .container-cv-guide,
+  .cv-guide-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 3rem 5rem;
+  }
+
+  .container-create-cv-guide {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-items {
+    display: flex;
+    width: 150px;
+    height: auto;
   }
 }
