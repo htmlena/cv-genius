@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './style.scss';
-import imagehome from './img/computer.jpg';
+import './style.css';
 import imagestatistics from './img/cv-graphic.jpg';
 import imageMainHome from './img/main-home-picture.jpg';
 import cvexample from './img/cv-template-example.jpg';
@@ -57,7 +56,10 @@ const Home = () => {
         </div>
         <div className="container-home-action">
           <h2 className="header-medium">Let the journey begin!</h2>
-          <p>Create a custom CV for a position you are applying for.</p>
+          <p>
+            Create a custom CV using our tips for a position you are applying
+            for .
+          </p>
           <Link className="create-cv" to="/cv-generator">
             Create your CV
           </Link>
