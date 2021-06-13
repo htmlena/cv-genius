@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
-import './style.scss';
+import './style.css';
 import { Link } from 'react-router-dom';
 
 const CvGuide = () => {
