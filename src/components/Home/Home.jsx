@@ -4,7 +4,7 @@ import './style.scss';
 import imagehome from './img/computer.jpg';
 import imagestatistics from './img/cv-graphic.jpg';
 import imageMainHome from './img/main-home-picture.jpg';
-import cvexample from './img/cv-example.jpg';
+import cvexample from './img/cv-template-example.jpg';
 import Footer from '../Footer/Footer';
 
 const Home = () => {
@@ -61,7 +61,11 @@ const Home = () => {
           <Link className="create-cv" to="/cv-generator">
             Create your CV
           </Link>
-          <img className="cv-example" src={cvexample} alt="cv-example" />
+          <img
+            className="cv-example"
+            src={cvexample}
+            alt="CV template example"
+          />
         </div>
       </div>
       <footer>

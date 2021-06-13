@@ -46,9 +46,10 @@
 }
 
 .cv-example {
-  width: 10rem;
+  width: 18rem;
   height: auto;
   margin: 2rem 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.035), 0 100px 80px rgba(0, 0, 0, 0.07);
 }
 
 .statistics {
@@ -124,6 +125,10 @@ p {
 }
 
 @media (min-width: 992px) {
+  .cv-example {
+    width: 20rem;
+  }
+
   .image-home {
     padding-top: 1.7rem;
     width: 35rem;
