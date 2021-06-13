@@ -109,7 +109,7 @@ const Generator = () => {
     <>
       <form className="keywords-form-container">
         <Keywords />
-      </form>{' '}
+      </form>
       {!previewVisible && (
         <>
           <form className="main-form-container">
