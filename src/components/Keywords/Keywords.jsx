@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Generator/style.css';
 import InfoTooltip from '../InfoTooltip/InfoTooltip';
 import '../Generator/style.css';

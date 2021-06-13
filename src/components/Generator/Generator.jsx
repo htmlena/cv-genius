@@ -107,49 +107,67 @@ const Generator = () => {
 
   return (
     <>
-      <form className="keywords-form-container">
-        <Keywords />
-      </form>
-      {!previewVisible && (
-        <>
-          <form className="main-form-container">
-            <PersonalInfo
-              userName={userName}
-              setUserName={setUserName}
-              userSurname={userSurname}
-              setUserSurname={setUserSurname}
-              userEmail={userEmail}
-              setUserEmail={setUserEmail}
-              userMobile={userMobile}
-              setUserMobile={setUserMobile}
-              linkedinUrl={linkedinUrl}
-              setLinkedinUrl={setLinkedinUrl}
-              otherUrl={otherUrl}
-              setOtherUrl={setOtherUrl}
-              speech={speech}
-              setSpeech={setSpeech}
-            />
-            <WorkExperience
-              workExperience={workExperience}
-              setWorkExperience={setWorkExperience}
-            />
-            <Education education={education} setEducation={setEducation} />
+      <form>
+        {!previewVisible && (
+          <>
+            <form className="main-form-container">
+              <Keywords />
+              <PersonalInfo
+                userName={userName}
+                setUserName={setUserName}
+                userSurname={userSurname}
+                setUserSurname={setUserSurname}
+                userEmail={userEmail}
+                setUserEmail={setUserEmail}
+                userMobile={userMobile}
+                setUserMobile={setUserMobile}
+                linkedinUrl={linkedinUrl}
+                setLinkedinUrl={setLinkedinUrl}
+                otherUrl={otherUrl}
+                setOtherUrl={setOtherUrl}
+                speech={speech}
+                setSpeech={setSpeech}
+              />
+              <WorkExperience
+                workExperience={workExperience}
+                setWorkExperience={setWorkExperience}
+              />
+              <Education education={education} setEducation={setEducation} />
 
-            <Skills skillLevel={skillLevel} setSkillLevel={setSkillLevel} />
+              <Skills skillLevel={skillLevel} setSkillLevel={setSkillLevel} />
 
-            <Languages
-              languageLevel={languageLevel}
-              setLanguageLevel={setLanguageLevel}
-            />
+              <Languages
+                languageLevel={languageLevel}
+                setLanguageLevel={setLanguageLevel}
+              />
 
-            <Courses course={course} setCourse={setCourse} />
+              <Courses course={course} setCourse={setCourse} />
 
-            <Hobbies hobbies={hobbies} setHobbies={setHobbies} />
+              <Hobbies hobbies={hobbies} setHobbies={setHobbies} />
 
-            <div className="preview-button-container">
+              <div className="preview-button-container">
+                <button
+                  type="button"
+                  className="preview-button"
+                  onClick={() => {
+                    if (previewVisible) {
+                      setPreviewVisible(false);
+                    } else {
+                      setPreviewVisible(true);
+                    }
+                  }}
+                >
+                  Preview
+                </button>
+              </div>
+            </form>
+          </>
+        )}
+        {previewVisible && (
+          <>
+            <div className="buttons-container">
               <button
-                type="button"
-                className="preview-button"
+                className="back-button"
                 onClick={() => {
                   if (previewVisible) {
                     setPreviewVisible(false);
@@ -158,29 +176,32 @@ const Generator = () => {
                   }
                 }}
               >
-                Preview
+                Back to Form
               </button>
-            </div>
-          </form>
-        </>
-      )}
-      {previewVisible && (
-        <>
-          <div className="buttons-container">
-            <button
-              className="back-button"
-              onClick={() => {
-                if (previewVisible) {
-                  setPreviewVisible(false);
-                } else {
-                  setPreviewVisible(true);
+              <PDFDownloadLink
+                document={
+                  <CvView
+                    userName={userName}
+                    userSurname={userSurname}
+                    userEmail={userEmail}
+                    userMobile={userMobile}
+                    speech={speech}
+                    workExperience={workExperience}
+                    education={education}
+                    skillLevel={skillLevel}
+                    languageLevel={languageLevel}
+                    hobbies={hobbies}
+                    course={course}
+                    linkedinUrl={linkedinUrl}
+                    otherUrl={otherUrl}
+                  />
                 }
-              }}
-            >
-              Back to Form
-            </button>
-            <PDFDownloadLink
-              document={
+              >
+                <button className="download-button">Download CV</button>
+              </PDFDownloadLink>
+            </div>
+            <div className="preview">
+              <PDFViewer className="pdf-viewer">
                 <CvView
                   userName={userName}
                   userSurname={userSurname}
@@ -196,32 +217,11 @@ const Generator = () => {
                   linkedinUrl={linkedinUrl}
                   otherUrl={otherUrl}
                 />
-              }
-            >
-              <button className="download-button">Download CV</button>
-            </PDFDownloadLink>
-          </div>
-          <div className="preview">
-            <PDFViewer className="pdf-viewer">
-              <CvView
-                userName={userName}
-                userSurname={userSurname}
-                userEmail={userEmail}
-                userMobile={userMobile}
-                speech={speech}
-                workExperience={workExperience}
-                education={education}
-                skillLevel={skillLevel}
-                languageLevel={languageLevel}
-                hobbies={hobbies}
-                course={course}
-                linkedinUrl={linkedinUrl}
-                otherUrl={otherUrl}
-              />
-            </PDFViewer>
-          </div>
-        </>
-      )}
+              </PDFViewer>
+            </div>
+          </>
+        )}
+      </form>
     </>
   );
 };

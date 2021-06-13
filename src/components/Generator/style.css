@@ -1,10 +1,3 @@
-.keywords-form-container {
-  padding: 2rem 2rem 0rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .keywords-container {
   width: 100%;
 }
@@ -16,10 +9,13 @@
   width: 100%;
   padding: 0.7rem 0.5rem;
   resize: none;
+  color: black;
+  font-weight: 700;
 }
 
 .input-keywords::placeholder {
   color: black;
+  font-weight: 400;
 }
 
 .main-form-container {
@@ -89,6 +85,7 @@
 .preview {
   display: flex;
   justify-content: center;
+  padding-bottom: 5rem;
 }
 
 .pdf-viewer {
@@ -208,9 +205,6 @@
 
 @media (min-width: 688px) {
   .main-form-container {
-    align-items: flex-start;
-  }
-  .keywords-form-container {
     align-items: flex-start;
   }
 
@@ -336,13 +330,6 @@
     max-width: 70%;
     margin: 0 auto;
     padding: 3rem;
-  }
-
-  .keywords-form-container {
-    max-width: 70%;
-    margin: 0 auto;
-    padding: 3rem;
-    padding-bottom: 0rem;
   }
 
   .personal-info-grid,
