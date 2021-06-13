@@ -10,23 +10,26 @@ const About = () => {
           Two former recruiters wanted to share their knowledge and help others
           to write a CV that will stand out.
         </h1>
-        <p className="about-citations">
-          “Why have you not mentioned in your CV that you got accepted to
-          Cambridge University for your Master studies starting in 2 months?”{' '}
-        </p>
-        <hr />
-        <p className="about-citations">
-          “Where in your CV is your long-term UX Design course which I know you
-          are attending? It ends in 2 weeks only, you should have mentioned
-          that...”
-        </p>{' '}
-        <hr />{' '}
-        <p className="about-citations">
-          “Did you really mention in your CV that “you like to travel”, without
-          mentioning the fact that you are also writing a blog about your
-          travels?”
-        </p>
-        <hr />
+        <div>
+          <p className="about-citations">
+            “Why have you not mentioned in your CV that you got accepted to
+            Cambridge University for your Master studies starting in 2 months?”{' '}
+          </p>
+        </div>
+        <div>
+          <p className="about-citations">
+            “Where in your CV is your long-term UX Design course which I know
+            you are attending? It ends in 2 weeks only, you should have
+            mentioned that...”
+          </p>
+        </div>{' '}
+        <div>
+          <p className="about-citations">
+            “Did you really mention in your CV that “you like to travel”,
+            without mentioning the fact that you are also writing a blog about
+            your travels?”
+          </p>
+        </div>
         <div className="about-text">
           These and other very similar stories were all around us while working
           as recruiters. Very smart people did not get the chance to even be
