@@ -32,6 +32,10 @@
   cursor: pointer;
 }
 
+.header-about {
+  text-align: center;
+}
+
 h2 {
   text-align: center;
 }

@@ -18,6 +18,10 @@
   resize: none;
 }
 
+.input-keywords::placeholder {
+  color: black;
+}
+
 .main-form-container {
   padding: 2rem 2rem 1rem;
   display: flex;

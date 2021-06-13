@@ -58,7 +58,7 @@ const Home = () => {
           <h2 className="header-medium">Let the journey begin!</h2>
           <p>
             Create a custom CV using our tips for a position you are applying
-            for .
+            for.
           </p>
           <Link className="create-cv" to="/cv-generator">
             Create your CV
