@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import React from 'react';
-import '../Generator/style.scss';
+import '../Generator/style.css';
 import InfoTooltip from '../InfoTooltip/InfoTooltip';
 
 const Languages = ({ languageLevel, setLanguageLevel }) => {

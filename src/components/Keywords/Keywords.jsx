@@ -1,7 +1,7 @@
 import React from 'react';
-import '../Generator/style.scss';
+import '../Generator/style.css';
 import InfoTooltip from '../InfoTooltip/InfoTooltip';
-import '../Generator/style.scss';
+import '../Generator/style.css';
 
 const Keywords = () => {
   return (

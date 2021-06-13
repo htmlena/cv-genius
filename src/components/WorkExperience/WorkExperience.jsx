@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Generator/style.scss';
+import '../Generator/style.css';
 import { nanoid } from 'nanoid';
 import InfoTooltip from '../InfoTooltip/InfoTooltip';
 

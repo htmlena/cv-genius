@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.scss';
+import './style.css';
 import { CvView } from '../CvView/CvView';
 import PersonalInfo from '../PersonalInfo/PersonalInfo';
 import Education from '../Education/Education';
