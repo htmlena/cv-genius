@@ -22,7 +22,7 @@ const Home = () => {
           <img
             className="image-home"
             src={imageMainHome}
-            alt="main-home-graphic"
+            alt="Vector illustration of two people in the office"
           ></img>
         </div>
         <div className="container-home-statistics">
@@ -50,7 +50,7 @@ const Home = () => {
             <img
               className="cv-statistics"
               src={imagestatistics}
-              alt="cv-graphic"
+              alt="Vector illustration of CVs on the table"
             ></img>
           </div>
         </div>

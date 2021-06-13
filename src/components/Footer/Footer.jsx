@@ -11,6 +11,7 @@ const Footer = () => {
             className="developed-link"
             href="https://github.com/paulipa1"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Paula
           </a>{' '}
@@ -19,6 +20,7 @@ const Footer = () => {
             className="developed-link"
             href="https://htmlena.dev/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Lenka
           </a>{' '}
@@ -29,6 +31,7 @@ const Footer = () => {
           className="resource-link"
           href="https://www.freepik.com/vectors/hand"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Hand vector created by pch.vector - www.freepik.com
         </a>
@@ -36,6 +39,7 @@ const Footer = () => {
           className="resource-link"
           href="https://zety.com/blog/resume-statistics"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {' '}
           Statistics from www.zety.com
