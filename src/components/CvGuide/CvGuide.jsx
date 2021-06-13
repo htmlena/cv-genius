@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const CvGuide = () => {
   return (
     <>
-      <div className="container-tips">
+      <div className="container-cv-guide">
         <h1>A complex guide on how to create your CV</h1>
         <div>
           <p>
@@ -109,118 +109,134 @@ const CvGuide = () => {
           </p>
         </div>
         <h2 className="cv-guide-title">Create your CV </h2>
-        <h3 className="cv-guide-subtitle">Personal info</h3>
-        <div>
+        <div className="container-create-cv-guide">
+          <div className="container-item">
+            <h3 className="cv-guide-subtitle">Personal info</h3>
+            <div>
+              <p>
+                This is the first section everyone sees when looking at your CV.
+                We highly recommend to include your LinkedIn URL with a
+                completed profile and one more URL to present your project,
+                website or github repositories. This way you can provide more
+                information about your work and your background.
+              </p>
+            </div>
+            <p>
+              {' '}
+              The Resume summary statement should give a quick introduction into
+              who you are, what you have accomplished and where you are heading.
+              It is a clear, brief message or “commercial” about you. It
+              communicates who you are, what you’re looking for and how you can
+              benefit an organization. Keep the message under 5 sentences. We
+              recommend sticking to the point and taking into account the
+              position and company you are applying to.
+            </p>{' '}
+            <div>
+              <p>Example of a resume statement:</p>
+              <p className="resume-statement-example">
+                {' '}
+                Senior Account Executive with experience helping companies clean
+                and enrich their data with sales intelligence tools in
+                Salesforce and Eloqua. Managing big data effectively, I have
+                helped over 200 clients reduce IT infrastructure overhead by up
+                to 40%. My wish is to share as well as continue enriching my
+                know-how within the Big Data team in Apple.
+              </p>
+            </div>
+          </div>
+          <div className="container-item">
+            <h3 className="cv-guide-subtitle">Work Experience</h3>
+            <p>
+              Start by reading the job listing's keywords and adjust this
+              section accordingly. Try to include them into your job
+              description. If you are an experienced senior, we recommend you to
+              include your last 3 most relevant job experiences to a position
+              you are applying for. If you are a student or just graduated,
+              include also your internships or any activities during school
+              (i.e. AIESEC). Include a description of your responsibilities and
+              outputs you have achieved in the position.
+            </p>
+          </div>
+          <div className="container-item">
+            <h3 className="cv-guide-subtitle">Education</h3>
+            <div>
+              <p>
+                Firstly, you do not have to include all of your schools. For
+                example- in case you have a higher education, you do not have to
+                mention your elementary or high school. Start with your highest
+                achieved education and include one or two institutions you have
+                attended before. If you studied at a university, do not forget
+                to add your degree.
+              </p>
+            </div>
+            <p>
+              {' '}
+              In case you completed a requalification course or any other
+              long-period course, and you have an ambition to work in this
+              field, we recommend that you include the course into the education
+              section. Description of the studied courses is optional, but it
+              provides you with another space for using the keywords which match
+              the concrete job offer.
+            </p>{' '}
+          </div>
+          <div className="container-item">
+            <h3 className="cv-guide-subtitle">Skills</h3>
+            <div>
+              <p>
+                Skills are your natural talents and the expertise you develop to
+                perform a task or a job. The skills are usually divided into the
+                Soft skills- a set of requirements necessary for the quality
+                performance of work, which do not depend on specific expertise,
+                but on the complex abilities of man. And the Hard skills: a set
+                of professional requirements (theoretical knowledge, practical
+                skills) needed to perform the profession.
+              </p>
+            </div>
+            <p>
+              Think about your acquired skills and check whether they match the
+              concrete job offer. If they do, use them in the exact keywords as
+              in the job offer. Be honest with your level, but do not
+              underestimate yourself. We recommend using four hard and four soft
+              skills, prioritized by the ones referred to in the certain job
+              offer. If you are a student or graduate looking for your first
+              job, you can only list your soft skills. If you are looking for a
+              job in Czech Republic, we recommend checking this list of skills
+              listed by the central database of competencies.{' '}
+            </p>
+          </div>
+          <div className="container-item">
+            <h3 className="cv-guide-subtitle">Languages</h3>
+            <p>
+              List all your language skills- including your native tongue. If
+              you are not sure about your level, you can test your approximate
+              level by completing a verified test online which will allow you to
+              estimate your abilities. Moreover, in case a language test would
+              be a part of the recruitment process, your results will match your
+              CV data.
+            </p>
+          </div>
+          <div className="container-item">
+            <h3 className="cv-guide-subtitle">Courses</h3>
+            <p>
+              Try to list courses that could be a fit for the certain job offer.
+              For example- if you did a yoga lector requalification course, but
+              you are applying for a Sales position, it is better to give this
+              space to sales-relevant courses such as Negotiation course and
+              mention the Yoga course below, in the hobbies section.
+            </p>
+          </div>
+          <h3 className="cv-guide-subtitle">Hobbies</h3>
           <p>
-            This is the first section everyone sees when looking at your CV. We
-            highly recommend to include your LinkedIn URL with a completed
-            profile and one more URL to present your project, website or github
-            repositories. This way you can provide more information about your
-            work and your background.
+            Usually, this is the final part of your CV and even though this part
+            is optional, we highly recommend using it in a way that will be
+            beneficial to you, as a candidate. Try not to write about general
+            hobbies such as “I like to read books and travel”. Be more specific
+            and start with the hobbies which describe you the most:”I travelled
+            to 20+ countries and spent 2 months couchsurfing across South Asia”.
+            Or: “I am an enthusiast house plant grower, I nurture various types
+            of plants, including a giant Aloe Vera.”
           </p>
         </div>
-        <p>
-          {' '}
-          The Resume summary statement should give a quick introduction into who
-          you are, what you have accomplished and where you are heading. It is a
-          clear, brief message or “commercial” about you. It communicates who
-          you are, what you’re looking for and how you can benefit an
-          organization. Keep the message under 5 sentences. We recommend
-          sticking to the point and taking into account the position and company
-          you are applying to.
-        </p>{' '}
-        <div>
-          <p>Example of a resume statement:</p>
-          <p className="resume-statement-example">
-            {' '}
-            Senior Account Executive with experience helping companies clean and
-            enrich their data with sales intelligence tools in Salesforce and
-            Eloqua. Managing big data effectively, I have helped over 200
-            clients reduce IT infrastructure overhead by up to 40%. My wish is
-            to share as well as continue enriching my know-how within the Big
-            Data team in Apple.
-          </p>
-        </div>
-        <h3 className="cv-guide-subtitle">Work Experience</h3>
-        <p>
-          Start by reading the job listing's keywords and adjust this section
-          accordingly. Try to include them into your job description. If you are
-          an experienced senior, we recommend you to include your last 3 most
-          relevant job experiences to a position you are applying for. If you
-          are a student or just graduated, include also your internships or any
-          activities during school (i.e. AIESEC). Include a description of your
-          responsibilities and outputs you have achieved in the position.
-        </p>
-        <h3 className="cv-guide-subtitle">Education</h3>
-        <div>
-          <p>
-            Firstly, you do not have to include all of your schools. For
-            example- in case you have a higher education, you do not have to
-            mention your elementary or high school. Start with your highest
-            achieved education and include one or two institutions you have
-            attended before. If you studied at a university, do not forget to
-            add your degree.
-          </p>
-        </div>
-        <p>
-          {' '}
-          In case you completed a requalification course or any other
-          long-period course, and you have an ambition to work in this field, we
-          recommend that you include the course into the education section.
-          Description of the studied courses is optional, but it provides you
-          with another space for using the keywords which match the concrete job
-          offer.
-        </p>{' '}
-        <h3 className="cv-guide-subtitle">Skills</h3>
-        <div>
-          <p>
-            Skills are your natural talents and the expertise you develop to
-            perform a task or a job. The skills are usually divided into the
-            Soft skills- a set of requirements necessary for the quality
-            performance of work, which do not depend on specific expertise, but
-            on the complex abilities of man. And the Hard skills: a set of
-            professional requirements (theoretical knowledge, practical skills)
-            needed to perform the profession.
-          </p>
-        </div>
-        <p>
-          Think about your acquired skills and check whether they match the
-          concrete job offer. If they do, use them in the exact keywords as in
-          the job offer. Be honest with your level, but do not underestimate
-          yourself. We recommend using four hard and four soft skills,
-          prioritized by the ones referred to in the certain job offer. If you
-          are a student or graduate looking for your first job, you can only
-          list your soft skills. If you are looking for a job in Czech Republic,
-          we recommend checking this list of skills listed by the central
-          database of competencies.{' '}
-        </p>
-        <h3 className="cv-guide-subtitle">Languages</h3>
-        <p>
-          List all your language skills- including your native tongue. If you
-          are not sure about your level, you can test your approximate level by
-          completing a verified test online which will allow you to estimate
-          your abilities. Moreover, in case a language test would be a part of
-          the recruitment process, your results will match your CV data.
-        </p>
-        <h3 className="cv-guide-subtitle">Courses</h3>
-        <p>
-          Try to list courses that could be a fit for the certain job offer. For
-          example- if you did a yoga lector requalification course, but you are
-          applying for a Sales position, it is better to give this space to
-          sales-relevant courses such as Negotiation course and mention the Yoga
-          course below, in the hobbies section.
-        </p>
-        <h3 className="cv-guide-subtitle">Hobbies</h3>
-        <p>
-          Usually, this is the final part of your CV and even though this part
-          is optional, we highly recommend using it in a way that will be
-          beneficial to you, as a candidate. Try not to write about general
-          hobbies such as “I like to read books and travel”. Be more specific
-          and start with the hobbies which describe you the most:”I travelled to
-          20+ countries and spent 2 months couchsurfing across South Asia”. Or:
-          “I am an enthusiast house plant grower, I nurture various types of
-          plants, including a giant Aloe Vera.”
-        </p>
         <h2 className="cv-guide-title">Now you are ready to write your CV!</h2>
         <Link className="create-cv button-top" to="/cv-generator">
           Create your CV
