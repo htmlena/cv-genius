@@ -44,38 +44,5 @@ const Keywords = () => {
     </div>
   );
 };
-{
-  /* <div className="keywords-info-container">
-  <div className="keywords-header-container">
-    <h2>Resume keywords</h2>
-    <InfoTooltip
-      content={
-        <>
-          <p>
-            List all keywords from the concrete job offer you will be
-            creating your CV for. Make sure you will use them in the
-            sections below, check the "i" for more tips. Example of
-            keywords: Javascript, Bootstrap, Google Analytics, Teamwork,
-            Time management, Independence at work.
-          </p>
-        </>
-      }
-    />
-  </div>
-  <form className="keywords-form-container">
-    <div className="label-input-container">
-      <label className="label-block" htmlFor="keywords"></label>
-      <textarea
-        className="input"
-        name="keywords"
-        id="keywords"
-        rows="5"
-        cols="25"
-        placeholder="React, API, SaaS platform, SEO, Creativity, Communication,..."
-      ></textarea>
-    </div>
-  </form>
-</div> */
-}
 
 export default Keywords;
