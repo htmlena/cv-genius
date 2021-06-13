@@ -133,6 +133,11 @@ p {
     width: 20rem;
   }
 
+  .cv-statistics {
+    width: 20rem;
+    height: 20rem;
+  }
+
   .image-home {
     padding-top: 1.7rem;
     width: 35rem;

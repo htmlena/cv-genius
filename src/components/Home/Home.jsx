@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
-import imagestatistics from './img/cv-graphic.jpg';
-import imageMainHome from './img/main-home-picture.jpg';
-import cvexample from './img/cv-template-example.jpg';
+import imagestatistics from './img/cv-graphic.webp';
+import imageMainHome from './img/main-home-picture.webp';
+import cvexample from './img/cv-template-example.webp';
 import Footer from '../Footer/Footer';
 
 const Home = () => {
