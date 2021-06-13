@@ -17,7 +17,7 @@ const CvGuide = () => {
             that stands out.
           </p>
         </div>
-        <h2>
+        <h2 className="cv-guide-title">
           Before you begin, think about your overall self career development.
         </h2>
         <div>
@@ -73,7 +73,7 @@ const CvGuide = () => {
             part in the CV creation process- mapping resume keywords.
           </p>
         </div>
-        <h2>Map the resume keywords</h2>
+        <h2 className="cv-guide-title">Map the resume keywords</h2>
         <div>
           <p>
             Job listings include the abilities and competencies an applicant
@@ -108,8 +108,8 @@ const CvGuide = () => {
             your CV.
           </p>
         </div>
-        <h2>Create your CV </h2>
-        <h3>Personal info</h3>
+        <h2 className="cv-guide-title">Create your CV </h2>
+        <h3 className="cv-guide-subtitle">Personal info</h3>
         <div>
           <p>
             This is the first section everyone sees when looking at your CV. We
@@ -141,7 +141,7 @@ const CvGuide = () => {
             Data team in Apple.
           </p>
         </div>
-        <h3>Work Experience</h3>
+        <h3 className="cv-guide-subtitle">Work Experience</h3>
         <p>
           Start by reading the job listing's keywords and adjust this section
           accordingly. Try to include them into your job description. If you are
@@ -151,7 +151,7 @@ const CvGuide = () => {
           activities during school (i.e. AIESEC). Include a description of your
           responsibilities and outputs you have achieved in the position.
         </p>
-        <h3>Education</h3>
+        <h3 className="cv-guide-subtitle">Education</h3>
         <div>
           <p>
             Firstly, you do not have to include all of your schools. For
@@ -171,7 +171,7 @@ const CvGuide = () => {
           with another space for using the keywords which match the concrete job
           offer.
         </p>{' '}
-        <h3>Skills</h3>
+        <h3 className="cv-guide-subtitle">Skills</h3>
         <div>
           <p>
             Skills are your natural talents and the expertise you develop to
@@ -194,7 +194,7 @@ const CvGuide = () => {
           we recommend checking this list of skills listed by the central
           database of competencies.{' '}
         </p>
-        <h3>Languages</h3>
+        <h3 className="cv-guide-subtitle">Languages</h3>
         <p>
           List all your language skills- including your native tongue. If you
           are not sure about your level, you can test your approximate level by
@@ -202,7 +202,7 @@ const CvGuide = () => {
           your abilities. Moreover, in case a language test would be a part of
           the recruitment process, your results will match your CV data.
         </p>
-        <h3>Courses</h3>
+        <h3 className="cv-guide-subtitle">Courses</h3>
         <p>
           Try to list courses that could be a fit for the certain job offer. For
           example- if you did a yoga lector requalification course, but you are
@@ -210,7 +210,7 @@ const CvGuide = () => {
           sales-relevant courses such as Negotiation course and mention the Yoga
           course below, in the hobbies section.
         </p>
-        <h3>Hobbies</h3>
+        <h3 className="cv-guide-subtitle">Hobbies</h3>
         <p>
           Usually, this is the final part of your CV and even though this part
           is optional, we highly recommend using it in a way that will be
@@ -221,7 +221,7 @@ const CvGuide = () => {
           “I am an enthusiast house plant grower, I nurture various types of
           plants, including a giant Aloe Vera.”
         </p>
-        <h2>Now you are ready to write your CV!</h2>
+        <h2 className="cv-guide-title">Now you are ready to write your CV!</h2>
         <Link className="create-cv button-top" to="/cv-generator">
           Create your CV
         </Link>

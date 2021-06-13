@@ -36,7 +36,11 @@
   text-align: center;
 }
 
-h2 {
+.cv-guide-title {
+  text-align: center;
+}
+
+.cv-guide-subtitle {
   text-align: center;
 }
 
